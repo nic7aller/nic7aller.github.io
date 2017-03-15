@@ -1,11 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>N7 - Home</title>
+    <title>N7 - Resume</title>
     <link rel="icon" href="../pics/N7Chip.png" />
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -21,21 +21,39 @@
                     <span class="icon-bar"></span>
                 </button>
                 <img class="navbar-brand" src="../pics/N7ChipW.png">
-                <a class="navbar-brand" href="">Nic Siebenaller</a>
+                <a class="navbar-brand" href="../index.html">Nic Siebenaller</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="">Home<span class="sr-only">(current)</span></a></li>
-                    <li><a href="../resume.html">Resume</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="active"><a>Resume<span class="sr-only">(current)</span></a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="container-fluid">
-        <div class="jumbotron">
-            <h1>Welcome!</h1>
-            <p>Visit the <a href="../resume.html">Resume</a> page for more information about me, Nic Siebenaller. Reach out to me through the <a href="#">Contact</a> page.</p>
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#edu" data-toggle="tab" aria-expanded="true">Education</a></li>
+        <li class=""><a href="#work" data-toggle="tab" aria-expanded="false">Work Experience</a></li>
+        <li class=""><a href="#skills" data-toggle="tab" aria-expanded="false">Skills</a></li>
+        <li class=""><a href="#projects" data-toggle="tab" aria-expanded="false">Projects</a></li>
+        <li class=""><a href="#extra" data-toggle="tab" aria-expanded="false">Extracurriculars</a></li>
+    </ul>
+    <div id="tabContent" class="tab-content">
+        <div class="tab-pane fade active in" id="edu">
+            <p>Education here</p>
+        </div>
+        <div class="tab-pane fade" id="work">
+            <p>Work experience here</p>
+        </div>
+        <div class="tab-pane fade" id="skills">
+            <p>Skills here</p>
+        </div>
+        <div class="tab-pane fade" id="projects">
+            <p>Projects here</p>
+        </div>
+        <div class="tab-pane fade" id="extra">
+            <p>Extracurriculars here</p>
         </div>
     </div>
     <footer class="footer">
