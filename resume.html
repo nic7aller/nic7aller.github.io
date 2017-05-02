@@ -33,16 +33,20 @@
         </div>
     </nav>
     <div class="container-fluid">
-        <ul class="nav nav-tabs">
-            <li class="active"><a href="#edu" data-toggle="tab" aria-expanded="true">Education</a></li>
-            <li class=""><a href="#work" data-toggle="tab" aria-expanded="false">Work Experience</a></li>
-            <li class=""><a href="#skills" data-toggle="tab" aria-expanded="false">Skills</a></li>
-            <li class=""><a href="#projects" data-toggle="tab" aria-expanded="false">Projects</a></li>
-            <li class=""><a href="#extra" data-toggle="tab" aria-expanded="false">Extracurriculars</a></li>
-        </ul>
+        <div class="scroller scroller-left"><i class="glyphicon glyphicon-chevron-left"></i></div>
+        <div class="scroller scroller-right"><i class="glyphicon glyphicon-chevron-right"></i></div>
+        <div class="wrapper">
+            <ul class="nav nav-tabs list" id="resume-tabs">
+                <li class="active"><a href="#edu" data-toggle="tab" aria-expanded="true">Education</a></li>
+                <li class=""><a href="#work" data-toggle="tab" aria-expanded="false">Work Experience</a></li>
+                <li class=""><a href="#skills" data-toggle="tab" aria-expanded="false">Skills</a></li>
+                <li class=""><a href="#projects" data-toggle="tab" aria-expanded="false">Projects</a></li>
+                <li class=""><a href="#extra" data-toggle="tab" aria-expanded="false">Extracurriculars</a></li>
+            </ul>
+        </div>
         <div id="tabContent" class="tab-content">
             <div class="tab-pane fade active in" id="edu">
-                <div class="container-fluid top-margin">
+                <div class="container-fluid">
                     <div class="panel-group">
                         <div class="panel panel-default">
                             <div class="panel-heading">
@@ -80,7 +84,7 @@
                 </div>
             </div>
             <div class="tab-pane fade" id="work">
-                <div class="container-fluid top-margin">
+                <div class="container-fluid">
                     <div class="panel-group">
                         <div class="panel panel-default">
                             <div class="panel-heading">
@@ -143,7 +147,7 @@
                 </div>
             </div>
             <div class="tab-pane fade " id="skills">
-                <div class="container-fluid top-margin">
+                <div class="container-fluid">
                     <div class="panel-group">
                         <div class="panel panel-default">
                             <div class="panel-heading">
@@ -168,14 +172,14 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" href="#collapse-skillsN">
+                                    <a data-toggle="collapse" href="#collapse-skillsK">
                                         <div class="progress progress-striped active">
-                                            <div class="progress-bar progress-bar-danger" style="width: 40%">NOVICE</div>
+                                            <div class="progress-bar progress-bar-danger" style="width: 50%">KNOWLEDGEABLE</div>
                                         </div>
                                     </a>
                                 </h4>
                             </div>
-                            <div id="collapse-skillsN" class="panel-collapse collapse in">
+                            <div id="collapse-skillsK" class="panel-collapse collapse in">
                                 <div class="panel-body">
                                     <h6>- Python</h6>
                                     <h6>- HTML5</h6>
@@ -207,7 +211,7 @@
                 </div>
             </div>
             <div class="tab-pane fade " id="projects">
-                <div class="container-fluid top-margin">
+                <div class="container-fluid">
                     <div class="panel-group">
                         <div class="panel panel-default">
                             <div class="panel-heading">
@@ -326,7 +330,7 @@
                 </div>
             </div>
             <div class="tab-pane fade " id="extra">
-                <div class="container-fluid top-margin">
+                <div class="container-fluid">
                     <div class="panel-group">
                         <div class="panel panel-default">
                             <div class="panel-heading">
@@ -365,10 +369,12 @@
             <p class="text-muted ">Created by Nic Siebenaller - 2017</p>
         </div>
     </footer>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js "></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- Bootstraps -->
     <script src="js/bootstrap.min.js "></script>
+    <!-- Scroller logic -->
+    <script src="js/scroller.js "></script>
 </body>
 
 </html>
