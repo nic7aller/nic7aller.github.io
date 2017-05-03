@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,800");
-@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab");
 
 /*!
  * bootswatch v3.3.7
@@ -275,7 +275,7 @@ th {
     text-align:center;
     cursor:grab;
     cursor:-webkit-grab;
-    color:#efefef;
+    color:#dedede;
     vertical-align:middle;
 }
 
@@ -6634,7 +6634,7 @@ button.list-group-item-danger.active:focus {
 }
 
 .panel-footer {
-    padding: 10px 15px;
+    padding: 5px 15px;
     background-color: #dedede;
     border-top: 1px solid #dedede;
     border-bottom-right-radius: 3px;
@@ -8280,9 +8280,8 @@ input:focus,
 
 .panel .panel-footer {
     font-size: 11px;
-    font-family: 'Roboto Slab', serif;
     line-height: 22px;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .panel-default .panel-heading,
