@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,800");
-@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400");
 
 /*!
  * bootswatch v3.3.7
@@ -97,6 +97,10 @@ h1 {
 mark {
     background: #ff0;
     color: #000
+}
+
+.slab-font {
+    font-family: 'Roboto Slab', serif;
 }
 
 small {
