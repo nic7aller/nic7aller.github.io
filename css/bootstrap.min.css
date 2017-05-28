@@ -298,6 +298,51 @@ th {
   float:left;
 }
 
+/*! Source: W3School */
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
 
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 
@@ -4920,7 +4965,7 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
     font-family: 'Roboto Slab', serif;
     line-height: 1.42857143;
     border: 1px solid transparent;
-    border-radius: 4px 4px 0 0
+    border-radius: 2px 2px 0 0
 }
 
 .nav-tabs>li>a:hover {
@@ -4968,7 +5013,7 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
 
 .nav-tabs.nav-justified>li>a {
     margin-right: 0;
-    border-radius: 4px
+    border-radius: 2px
 }
 
 .nav-tabs.nav-justified>.active>a,
@@ -4980,7 +5025,7 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
 @media (min-width:768px) {
     .nav-tabs.nav-justified>li>a {
         border-bottom: 1px solid #dedede;
-        border-radius: 4px 4px 0 0
+        border-radius: 2px 2px 0 0
     }
     .nav-tabs.nav-justified>.active>a,
     .nav-tabs.nav-justified>.active>a:hover,
@@ -5051,7 +5096,7 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
 
 .nav-tabs-justified>li>a {
     margin-right: 0;
-    border-radius: 4px
+    border-radius: 2px
 }
 
 .nav-tabs-justified>.active>a,
@@ -5063,7 +5108,7 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
 @media (min-width:768px) {
     .nav-tabs-justified>li>a {
         border-bottom: 1px solid #dedede;
-        border-radius: 4px 4px 0 0
+        border-radius: 2px 2px 0 0
     }
     .nav-tabs-justified>.active>a,
     .nav-tabs-justified>.active>a:hover,
@@ -5214,6 +5259,7 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
     float: left;
     padding: 20px 15px;
     font-size: 18px;
+    font-family: 'Roboto Slab', serif;
     line-height: 20px;
     height: 60px
 }
