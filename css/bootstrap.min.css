@@ -298,49 +298,72 @@ th {
   float:left;
 }
 
-/*! Source: W3School */
+/*! Source: W3School; modified */
 
 .sidenav {
     height: 100%;
-    width: 0;
+    width: 250px;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
     background-color: #000000;
     overflow-x: hidden;
-    padding-top: 60px;
-    transition: 0.5s;
+    transition: 0.75s;
 }
 
 .sidenav a {
-    padding: 8px 8px 8px 32px;
+    padding: 8px;
+    padding-bottom: 16px;
     text-decoration: none;
-    font-size: 25px;
-    color: #818181;
+    font-size: 18px;
+    color: #909090;
     display: block;
     transition: 0.3s
 }
 
-.sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
+.link {
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+.sidenav a .narbar-brand {
+    font-family: 'Roboto-Slab', serif;
+    font-size: 36px;
+}
+
+.sidenav a:hover, .sidenav a:focus, .offcanvas a:focus{
+    color: #ffffff;
+    text-decoration: none;
 }
 
 .sidenav .closebtn {
     position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+    top: 50%;
+    right: 0;
+    font-size: 20px;
+}
+
+.sideLinks {
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+    transition: 0;
+}
+
+.closebtn {
+    height: fit-content;
+    text-align: center;
 }
 
 #main {
-    transition: margin-left .5s;
+    transition-delay: 0.05s;
+    transition: margin-left 0.75s;
     padding: 20px;
 }
 
 @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
 }
 

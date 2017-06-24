@@ -7,28 +7,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Nic 7 - Sidebar Test Page</title>
     <link rel="icon" href="../pics/N7Chip.png" />
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body onload="openNav()">
+<body>
     <div id="theSidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <img class="navbar-brand" src="../pics/N7ChipW.png">
-        <a class="navbar-brand" href="#">Nic Siebenaller</a>
-        <a href="#">Home</a>
-        <a href="../resume.html">Resume</a>
-        <a href="../contact.html">Contact</a>
+        <div class="sideLinks col-xs-10 ">
+            <a>
+                <img class="navbar-brand" src="../pics/N7ChipW.png">
+                <!--<span class="navbar-brand" href="#">Nic Siebenaller</span>-->
+            </a>
+            <a/>
+            <a href="../resume.html">
+                <span class="nav-close-link fa fa-tasks"/>
+                <span class="link"> Resume</span>
+            </a>
+            <a href="../contact.html">
+                <span class="nav-close-link fa fa-user-circle-o"/>
+                <span class="link"> Contact</span>
+            </a>
+            <a href="https://www.linkedin.com/in/nicholassiebenaller/">
+                <span class="nav-close-link fa fa-linkedin"/>
+                <span class="link"> nicholassiebenaller</span>
+            </a>
+            <a href="https://www.github.com/nic7aller/">
+                <span class="nav-close-link fa fa-github-alt"/>
+                <span class="link" > nic7aller</span>
+            </a>
+        </div>
+        <div href="javascript:void(0)" class="closebtn col-xs-2">
+            <span id="closeArrow" class="fa fa-angle-left"/>
+        </div>
     </div>
 
-<span onclick="openNav()">Open Here</span>
-
-<div id="main">
-  Olive the cat
-  Olive the cat
-  Everyone loves Olive the cat
-</div>
+    <div id="main" class="container">
+        <p>Olive the cat</p>
+        <p>Olive the cat</p>
+        <p>Everyone loves Olive the cat</p>
+    </div>
     <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js "></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <!-- Bootstraps -->
     <script src="js/bootstrap.min.js "></script>
     <script src="js/sidebar.js "></script>
