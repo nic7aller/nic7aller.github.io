@@ -1,7 +1,6 @@
 /*! Source: W3Schools; modified */
 
 function openNav() {
-    $(".nav-close-link").css("padding-left", "0px");
     $(".link").fadeIn();
     $("#theSidenav").width("250px");
     $("#main").css("margin-left", "250px");
@@ -10,10 +9,9 @@ function openNav() {
 }
 
 function closeNav() {
-    $(".nav-close-link").css("padding-left", "-16px");
     $(".link").fadeOut();
-    $("#theSidenav").width("50px");
-    $("#main").css("margin-left", "50px");
+    $("#theSidenav").width("60px");
+    $("#main").css("margin-left", "60px");
     $("#closeArrow").removeClass("fa-angle-left");
     $("#closeArrow").addClass("fa-angle-right");
 }

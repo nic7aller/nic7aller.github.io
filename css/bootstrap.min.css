@@ -309,7 +309,7 @@ th {
     left: 0;
     background-color: #000000;
     overflow-x: hidden;
-    transition: 0.75s;
+    transition: 0.5s;
 }
 
 .sidenav a {
@@ -327,15 +327,23 @@ th {
     display: inline-block;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
+    padding-left: 8px
 }
 
 .sidenav .branding {
     padding-top: 16px;
+    padding-left: -8px;
 }
 
-.sidenav .branding span {
+.sidenav .branding a .link {
     font-family: 'Roboto-Slab', serif;
-    font-size: 20px;
+    font-size: 24px;
+    align-content: center;
+}
+
+.sidenav .branding a .nav-logo {
+    width: 32px;
+    padding-left: -8px;
 }
 
 .sidenav a:hover, .sidenav a:focus, .offcanvas a:focus{
@@ -357,13 +365,13 @@ th {
     transition: 0;
 }
 
+.sidelinks a span .fa{
+    margin-left: 8px;
+}
+
 .closebtn {
     height: fit-content;
     text-align: center;
-}
-
-.nav-close-link {
-    padding-right: 8px
 }
 
 .branding {
@@ -372,8 +380,7 @@ th {
 }
 
 #main {
-    transition-delay: 0.05s;
-    transition: margin-left 0.75s;
+    transition: margin-left 0.5s;
     padding: 20px;
 }
 
