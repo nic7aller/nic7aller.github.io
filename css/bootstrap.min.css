@@ -357,6 +357,11 @@ th {
     text-align: center;
 }
 
+.branding {
+    width: fit-content;
+    height: fit-content;
+}
+
 #main {
     transition-delay: 0.05s;
     transition: margin-left 0.75s;
