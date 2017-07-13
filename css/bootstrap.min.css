@@ -319,6 +319,7 @@ th {
     font-size: 18px;
     color: #909090;
     display: block;
+    white-space: nowrap;
     transition: 0.3s
 }
 
@@ -328,9 +329,13 @@ th {
     font-size: 16px;
 }
 
-.sidenav a .narbar-brand {
+.sidenav .branding {
+    padding-top: 16px;
+}
+
+.sidenav .branding span {
     font-family: 'Roboto-Slab', serif;
-    font-size: 36px;
+    font-size: 20px;
 }
 
 .sidenav a:hover, .sidenav a:focus, .offcanvas a:focus{
@@ -355,6 +360,10 @@ th {
 .closebtn {
     height: fit-content;
     text-align: center;
+}
+
+.nav-close-link {
+    padding-right: 8px
 }
 
 .branding {

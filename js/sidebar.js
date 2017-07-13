@@ -3,7 +3,6 @@
 function openNav() {
     $(".nav-close-link").css("padding-left", "0px");
     $(".link").fadeIn();
-    $(".navbar-brand").css("width", "auto");
     $("#theSidenav").width("250px");
     $("#main").css("margin-left", "250px");
     $("#closeArrow").removeClass("fa-angle-right");
@@ -13,7 +12,6 @@ function openNav() {
 function closeNav() {
     $(".nav-close-link").css("padding-left", "-16px");
     $(".link").fadeOut();
-    $(".navbar-brand").css("width", "0");
     $("#theSidenav").width("50px");
     $("#main").css("margin-left", "50px");
     $("#closeArrow").removeClass("fa-angle-left");
