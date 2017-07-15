@@ -16,6 +16,11 @@ function closeNav() {
     $("#closeArrow").addClass("fa-angle-right");
 }
 
+function closeIfLowRes() {
+    if ($(window).width() < 720) closeNav();
+}
+
 $(".closebtn").click(function() {
     $("#closeArrow").hasClass("fa-angle-left") ? (closeNav()) : (openNav());
 });
+
