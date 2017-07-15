@@ -309,17 +309,21 @@ th {
     left: 0;
     background-color: #000000;
     overflow-x: hidden;
+    overflow-y: hidden;
     transition: 0.5s;
 }
 
 .sidenav a {
+    width: fit-content;
     padding: 8px;
-    padding-bottom: 16px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
     text-decoration: none;
     font-size: 18px;
     color: #909090;
     display: block;
     white-space: nowrap;
+    border-radius: 2px;
     transition: 0.3s
 }
 
@@ -337,19 +341,27 @@ th {
     height: fit-content;
 }
 
-.slab-font {
+.sidenav a .nav-name {
+    display: inline-block;
     font-size: 20px;
     font-family: 'Roboto Slab', serif;
+    text-decoration: none;
     line-height: 20px;
-    color: #fff
+    height: 25px;
+    color: #fff;
+    padding-bottom: -8px;
+    margin-bottom: -8px;
+    transition: 0.5s;
 }
 
 .sidenav .branding a .nav-logo {
-    width: 32px;
+    width: 167px;
+    transition: width 0.5s;
 }
 
-.sidenav a:hover, .sidenav a:focus, .offcanvas a:focus{
+.sidenav a[href]:hover, .sidenav a[href]:focus, .offcanvas a[href]:focus {
     color: #ffffff;
+    background-color: #707070;
     text-decoration: none;
 }
 
@@ -364,11 +376,6 @@ th {
     display: inline-block;
     width: fit-content;
     height: fit-content;
-    transition: 0;
-}
-
-.sidelinks a span .fa{
-    margin-left: 8px;
 }
 
 .closebtn {
@@ -1568,8 +1575,8 @@ a {
     text-decoration: none
 }
 
-a:hover,
-a:focus {
+a[href]:hover,
+a[href]:focus {
     color: #ff0000;
     text-decoration: underline
 }
