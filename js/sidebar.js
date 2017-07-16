@@ -18,7 +18,7 @@ function closeNav() {
     $(".nav-logo").width("20px");
     if ($(window).width() < 720) {
         $("#theSidenav").width("22px");
-    $("#main").css("margin-left", "22px");
+        $("#main").css("margin-left", "22px");
     } else {
         $("#theSidenav").width("65px");
         $("#main").css("margin-left", "65px");
@@ -28,8 +28,42 @@ function closeNav() {
 }
 
 function closeIfLowRes() {
-    if ($(window).width() < 720) closeNav();
+    if ($(window).width() < 720) {
+        $(".fades").fadeOut();
+        $("#closeArrow").removeClass("fa-angle-left");
+        $("#closeArrow").addClass("fa-angle-right");
+    }
 }
+
+$(window).resize(function() {
+    if ($("#theSidenav").width() < 70){
+        if ($(window).width() < 720) {
+            if ($("#closeArrow").hasClass("fa-angle-left")){
+                $(".fades").fadeOut();
+                $("#closeArrow").removeClass("fa-angle-left");
+                $("#closeArrow").addClass("fa-angle-right");  
+            } else {
+                closeNav();
+            }
+        } else {
+            if ($("#closeArrow").hasClass("fa-angle-left")){
+                $(".fades").fadeIn();
+                $("#closeArrow").removeClass("fa-angle-right");
+                $("#closeArrow").addClass("fa-angle-left");
+            } else {
+                openNav();
+            }
+        }
+    } else {
+        if ($(window).width() < 720) {
+            if ($("#closeArrow").hasClass("fa-angle-left")){
+                closeNav();
+            } else {
+                openNav();
+            }
+        }
+    }
+});
 
 $(".closebtn").click(function() {
     $("#closeArrow").hasClass("fa-angle-left") ? (closeNav()) : (openNav());
