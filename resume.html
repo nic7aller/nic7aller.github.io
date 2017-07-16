@@ -6,33 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Nic 7 - Resume</title>
-    <link rel="icon" href="../pics/N7ChipRev.png" />
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="../pics/N7ChipRev.png"/> 
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body>
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-toggled">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <img class="navbar-brand" src="../pics/N7ChipWRev.png">
-                <a class="navbar-brand" href="../index.html">Nic Siebenaller</a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar-collapse-toggled">
-                <ul class="nav navbar-nav">
-                    <li><a href="../index.html">Home</a></li>
-                    <li class="active"><a>Resume<span class="sr-only">(current)</span></a></li>
-                    <li><a href="../contact.html">Contact</a></li>
-                </ul>
-            </div>
+<body onload="closeIfLowRes()">
+    <div id="theSidenav" class="sidenav">
+        <div class="branding col-xs-12">
+            <a href="../index.html"><img class="nav-logo" src="../pics/N7ChipWRev.png"></a>
+            <a><span class="nav-name">Nic Siebenaller</span></a>
         </div>
-    </nav>
-    <div class="container">
+        <div class="sideLinks col-xs-10">
+            <a href="">
+                <span class="nav-close-link fa fa-suitcase"/>
+                <span class="fades link">Resume</span>
+            </a>
+            <a href="../contact.html">
+                <span class="nav-close-link fa fa-user-circle-o"/>
+                <span class="fades link">Contact</span>
+            </a>
+            <a href="https://www.linkedin.com/in/nicholassiebenaller/">
+                <span class="nav-close-link fa fa-linkedin"/>
+                <span class="fades link">nicholassiebenaller</span>
+            </a>
+            <a href="https://www.github.com/nic7aller/">
+                <span class="nav-close-link fa fa-github-alt"/>
+                <span class="fades link">nic7aller</span>
+            </a>
+        </div>
+        <div href="javascript:void(0)" class="closebtn col-xs-2">
+            <span id="closeArrow" class="fa fa-angle-left"/>
+        </div>
+    </div>
+
+    <div id="main" class="container-fluid">
+        <div class="center-div">
         <div class="scroller scroller-left"><i class="glyphicon glyphicon-chevron-left"></i></div>
         <div class="scroller scroller-right"><i class="glyphicon glyphicon-chevron-right"></i></div>
         <div class="wrapper">
@@ -363,16 +372,13 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div></div>
     </div>
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js "></script>
-    <!-- Bootstraps -->
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js "></script>
-    <!-- Scroller logic -->
+    <script src="js/sidebar.js "></script>
     <script src="js/scroller.js "></script>
-    <!-- Sidebar logic -->
-    <!-- <script src="js/sidebar.js "></script> -->
 </body>
 
 </html>

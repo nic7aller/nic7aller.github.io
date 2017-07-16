@@ -5,8 +5,8 @@ function openNav() {
     $(".nav-name").css("color", "#fff");
     $(".nav-name").height("25px");
     $(".nav-logo").width("167px");
-    $("#theSidenav").width("250px");
-    if ($(window).width() > 719) $("#main").css("margin-left", "250px");
+    $("#theSidenav").width("240px");
+    if ($(window).width() > 719) $("#main").css("margin-left", "240px");
     $("#closeArrow").removeClass("fa-angle-right");
     $("#closeArrow").addClass("fa-angle-left");
 }
