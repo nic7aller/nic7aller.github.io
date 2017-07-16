@@ -27,7 +27,7 @@ function closeNav() {
     $("#closeArrow").addClass("fa-angle-right");
 }
 
-function closeIfLowRes() {
+function closeArrowToOpenArrowIfLowRes() {
     if ($(window).width() < 720) {
         $(".fades").fadeOut();
         $("#closeArrow").removeClass("fa-angle-left");
@@ -39,11 +39,10 @@ $(window).resize(function() {
     if ($("#theSidenav").width() < 70){
         if ($(window).width() < 720) {
             if ($("#closeArrow").hasClass("fa-angle-left")){
-                $(".fades").fadeOut();
-                $("#closeArrow").removeClass("fa-angle-left");
-                $("#closeArrow").addClass("fa-angle-right");  
+                 closeNav();
             } else {
-                closeNav();
+                $("#theSidenav").width("22px");
+                $("#main").css("margin-left", "22px");
             }
         } else {
             if ($("#closeArrow").hasClass("fa-angle-left")){
@@ -60,6 +59,10 @@ $(window).resize(function() {
                 closeNav();
             } else {
                 openNav();
+            }
+        } else {
+            if ($("#closeArrow").hasClass("fa-angle-left")){
+                $("#main").css("margin-left", "240px");
             }
         }
     }
