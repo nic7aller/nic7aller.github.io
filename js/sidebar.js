@@ -57,9 +57,7 @@ $(window).resize(function() {
         if ($(window).width() < 720) {
             if ($("#closeArrow").hasClass("fa-angle-left")){
                 closeNav();
-            } else {
-                openNav();
-            }
+            } 
         } else {
             if ($("#closeArrow").hasClass("fa-angle-left")){
                 $("#main").css("margin-left", "240px");
