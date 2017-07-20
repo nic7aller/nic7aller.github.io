@@ -251,26 +251,32 @@ th {
 }
 
 
-/*! Source: http://www.bootply.com/l2ChB4vYmC# */
+/*! Based on source: http://www.bootply.com/l2ChB4vYmC# */
+
 .wrapper {
     position:relative;
-    margin:0 auto;
-    overflow:hidden;
-	padding:5px;
-  	height:50px;
+    margin:5px auto;
+    border-bottom: 1px solid #dedede;
+    overflow-y: hidden;
+    overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+  	height:60px;
 }
 
 .list {
     position:absolute;
     left:0px;
-    top:0px;
-  	min-width:3000px;
+    bottom:0px;
+    min-width:600px;
+    white-space: nowrap;
   	margin-left:12px;
     margin-top:0px;
 }
 
 .list li {
-	display:table-cell;
+    float: none;
+    display: inline-block;
     position:relative;
     text-align:center;
     cursor:grab;
@@ -279,24 +285,6 @@ th {
     vertical-align:middle;
 }
 
-.scroller {
-  text-align:center;
-  cursor:pointer;
-  display:none;
-  padding:7px;
-  padding-top:11px;
-  white-space:no-wrap;
-  vertical-align:middle;
-  background-color:#fff;
-}
-
-.scroller-right{
-  float:right;
-}
-
-.scroller-left {
-  float:left;
-}
 
 /*! Based on styling from W3School */
 
@@ -309,7 +297,7 @@ th {
     left: 0;
     background-color: #000000;
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: auto;
     transition: 0.5s;
 }
 
@@ -418,7 +406,6 @@ th {
 }
 
 @media screen and (max-height: 420px) {
-    .sidenav { overflow-y: scroll; }
     .sidenav a { font-size: 16px; }
 }
 
@@ -1606,7 +1593,6 @@ a {
 a[href]:hover,
 a[href]:focus {
     color: #ff0000;
-    text-decoration: underline
 }
 
 a:focus {
@@ -4996,7 +4982,10 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
 .nav>li>a:hover,
 .nav>li>a:focus {
     text-decoration: none;
-    background-color: #f8f5f0
+    background-color: #eeeeee;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    transition: background-color 0.3s;
 }
 
 .nav>li.disabled>a {
@@ -5029,8 +5018,9 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
     max-width: none
 }
 
-.nav-tabs {
-    border-bottom: 1px solid #dedede
+.nav-tabs>li {
+    float: left;
+    margin-bottom: -1px
 }
 
 .nav-tabs>li {
