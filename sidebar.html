@@ -44,9 +44,19 @@
     </div>
 
     <div id="main" class="container-fluid">
-        <div class="jumbotron">
-            <h1>Welcome!</h1>
-            <p>Visit the <a href="../resume.html">Resume</a> page for more information about me, Nic Siebenaller. Reach out to me through the <a href="../contact.html">Contact</a> page.</p>
+        <div>
+            <form method="post" name="contact_form" action="../php/contact-form-handler.php">
+                Your Name:
+                <input name="name">
+
+                Email Address:
+                <input type="email" name="email">
+
+                Message:
+                <textarea name="message"></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
         </div>
     </div>
     
