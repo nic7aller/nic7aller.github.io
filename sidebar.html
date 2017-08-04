@@ -7,16 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Nic 7 - Sidebar Test Page</title>
     <link rel="icon" href="../pics/N7ChipRev.png"/> 
+    <link rel="stylesheet" href="css/styling.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          
 </head>
 
 <body onload="closeArrowToOpenArrowIfLowRes()">
     <div id="theSidenav" class="sidenav">
         <div class="branding col-xs-12">
             <a href="">
-                <!--<img class="nav-logo" src="C:/Users/Nicholas/Documents/GitHub/Website/pics/N7ChipWRev.png">-->
-                <img class="nav-logo" src="../pics/N7ChipWRev.png">
+                <img class="nav-logo" src="C:/Users/Nic/nic7aller.github.io/pics/N7ChipWRev.png">
+                <!--<img class="nav-logo" src="../pics/N7ChipWRev.png"> -->
             </a>
             <a><span class="nav-name">Nic Siebenaller</span></a>
         </div>
@@ -44,15 +46,45 @@
     </div>
 
     <div id="main" class="container-fluid">
-        <form class="form-group form-margin" action="https://formspree.io/siebenaller.8@osu.edu" method="POST">
-            <label for="name">Name</label>
-            <input id="name" class="form-control" name="name">
-            <label for="_replyto">Email</label>
-            <input id="_replyto" class="form-control" type="email" name="_replyto">
-            <label for="message">Message</label>
-            <textarea id="message" class="form-control" name="message"></textarea>
-            <input id="submit" class="btn btn-default" type="submit" value="Send">
-        </form>
+        <div class="col-md-8 col-md-offset-2" style="margin-bottom: 16px;">
+            <div class="row">
+                <img class="img-responsive img-rounded" src="../pics/Siebenaller-Nic.png" alt="Nic Siebenaller">
+            </div>
+        </div>
+        <div class="col-md-6 col-md-offset-3">
+            <form action="https://formspree.io/siebenaller.8@osu.edu" method="POST">
+                
+                <div class="col-md-12" style="text-align: center;">
+                    <h3 class="slab-font">Contact Me</h3> 
+                    <h6>I will respond to you as soon as I can!</h6>
+                </div>
+
+                <div class="col-md-12">
+                    <label for="name">Name</label> 
+                </div>
+                <div class="col-md-12">                   
+                    <input id="name" class="form-control form-spacing input-field" type="text" class="validate">
+                </div>
+                
+                <div class="col-md-12">
+                    <label for="email" data-error="wrong" data-success="right">Email</label>  
+                </div>
+                <div class="col-md-12">                  
+                    <input id="email" class="form-control form-spacing input-field" type="email">
+                </div>
+
+                <div class="col-md-12">
+                    <label for="message">Message</label>
+                </div>
+                <div class="col-md-12">
+                    <textarea id="message" class="form-control form-spacing input-field" name="message"></textarea>
+                </div>
+
+                <div class="col-md-12">
+                    <input id="submit" class="btn btn-default btn-resize" type="submit" value="Send">
+                </div>
+            </form>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
