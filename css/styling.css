@@ -1,14 +1,29 @@
+/* General styling */
+
+div.center-elements {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+div.center-elements div {
+    height: auto;
+    margin: 0 auto;
+    padding: 8px;
+}
+
 /*! Based on source: http://www.bootply.com/l2ChB4vYmC# */
 
 .wrapper {
-    position:relative;
-    margin:5px auto;
+    position: relative;
+    margin: 5px auto;
     border-bottom: 1px solid #dedede;
     overflow-y: hidden;
     overflow-x: auto;
 	-webkit-overflow-scrolling: touch;
     white-space: nowrap;
-  	height:60px;
+  	height: 60px;
 }
 
 .list {
@@ -33,7 +48,7 @@
 }
 
 
-/*! Based on styling from W3School */
+/*! Based on styling from W3School for sidebar */
 
 .sidenav {
     height: 100%;
