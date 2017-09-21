@@ -420,6 +420,7 @@ div.center-elements div {
 
 .closebtn {
     height: fit-content;
+    cursor: pointer;
     text-align: center;
     color: #fff;
 }
