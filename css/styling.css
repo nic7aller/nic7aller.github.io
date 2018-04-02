@@ -46,17 +46,7 @@ div.center-elements div {
 
 /* Parliament project */
 
-img#parliament-background
-{
-    size: 2001px;
-}
 
-div#parliament-background div#custom-scroll
-{
-    position: relative;
-    height: 100%;
-    width: 100%;
-}
 
 /* Custom scrollbar */
 
