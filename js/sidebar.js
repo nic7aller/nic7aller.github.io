@@ -1,4 +1,4 @@
-/*! Based on code from W3Schools */
+/*! Based on code from W3Schools, modified */
 
 function openNav() {
     $(".fades").fadeIn();
