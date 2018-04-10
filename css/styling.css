@@ -71,7 +71,6 @@ div.hover-visible {
 }
 
 div.hover-visible h4, div.hover-visible h5, div.hover-visible p {
-    /* display: inline-block; */
     position: relative;
     top: -8px;
     visibility: hidden;
@@ -128,18 +127,17 @@ div.info:hover {
     overflow: hidden;
     width: 0;
     max-width: 40%;
+    bottom: 0;
     height: 100%;
     transition: .4s ease;
 }
 
 #overlay.right {
-    bottom: 0;
     left: 100%;
     right: 0;
 }
 
 #overlay.left {
-    bottom: 0;
     left: 0;
     right: 100%;
 }
@@ -164,6 +162,39 @@ div.info:hover {
     color: #000;
     font-size: 28px;
     padding-left: 16px
+}
+
+/* The actual popup (appears on top): https://www.w3schools.com/howto/howto_js_popup.asp */
+.area-color .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: rgba(100, 100, 100, 0.90);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.area-color .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(100, 100, 100, 0.90) transparent transparent transparent;
+}
+
+div.area-color:hover .popuptext {
+    visibility: visible;
+    transition: .2s ease;
 }
 
 /* Custom scrollbar */
