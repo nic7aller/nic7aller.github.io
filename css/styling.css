@@ -46,7 +46,125 @@ div.center-elements div {
 
 /* Parliament project */
 
+div.img-resize {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+}
 
+div.img-resize, div.img-resize img  {
+    width: 1000px;
+}
+
+i.center-icon {
+    position: relative;
+    visibility: visible;
+    width: fit-content;
+    height: fit-content;
+    left: 6px;
+    top: 11px;
+}
+
+div.hover-visible {
+    visibility: hidden;
+    white-space: nowrap;
+}
+
+div.hover-visible h4, div.hover-visible h5, div.hover-visible p {
+    /* display: inline-block; */
+    position: relative;
+    top: -8px;
+    visibility: hidden;
+    width: fit-content;
+    height: fit-content;
+}
+
+div.hover-visible p {
+    top: 8px;
+}
+
+div.info:hover i.center-icon {
+    visibility: hidden;
+}
+
+div.info:hover div.hover-visible, 
+div.info:hover div.hover-visible h4,
+div.info:hover div.hover-visible h5, 
+div.info:hover div.hover-visible p {
+    visibility: visible;
+    -webkit-transition: .4s ease .1s;
+    transition: .4s ease .1s;
+}
+
+div.area-color, div.info {
+    position: absolute;
+    background-color: rgba(100, 100, 100, 0.50);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+div.area-color:hover {
+    background-color: rgba(150, 150, 150, 0.50);
+    -webkit-transition: .2s;
+    transition: .2s ease;
+    cursor: pointer;
+}
+
+div.info:hover {
+    background-color: rgba(255, 255, 255, 1.0);
+    border-radius: 15px;
+    width: 375px;
+    height: 150px;
+    transition: .2s ease;
+}
+
+#overlay {
+    visibility: hidden;
+    position: absolute;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-color: rgba(255, 255, 255, 0.9);
+    overflow: hidden;
+    width: 0;
+    max-width: 40%;
+    height: 100%;
+    transition: .4s ease;
+}
+
+#overlay.right {
+    bottom: 0;
+    left: 100%;
+    right: 0;
+}
+
+#overlay.left {
+    bottom: 0;
+    left: 0;
+    right: 100%;
+}
+
+.overlay-header, .overlay-pod {
+    border-radius: 15px;
+    padding: 16px;
+    background-color: #dedede;
+    color: #000;
+}
+
+.overlay-header {
+    white-space: nowrap;
+    top: 0;
+    cursor: pointer;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.overlay-title {
+    display: inline-block;
+    color: #000;
+    font-size: 28px;
+    padding-left: 16px
+}
 
 /* Custom scrollbar */
 
