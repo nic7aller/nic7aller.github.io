@@ -48,12 +48,13 @@ div.center-elements div {
 
 div.img-resize {
     position: relative;
-    margin-right: auto;
-    margin-left: auto;
+    width: 1000px;
+    margin: auto;
 }
 
-div.img-resize, div.img-resize img  {
+div.img-resize img  {
     width: 1000px;
+    margin: auto;
 }
 
 i.center-icon {
@@ -121,8 +122,8 @@ div.info:hover {
 #overlay {
     visibility: hidden;
     position: absolute;
-    padding-left: 4px;
-    padding-right: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
     background-color: rgba(255, 255, 255, 0.9);
     overflow: hidden;
     width: 0;
@@ -133,13 +134,28 @@ div.info:hover {
 }
 
 #overlay.right {
+    visibility: hidden;
     left: 100%;
     right: 0;
 }
 
 #overlay.left {
+    visibility: hidden;
     left: 0;
     right: 100%;
+}
+
+#overlay.out {
+    width: 40%;
+    visibility: visible;
+}
+
+#overlay.left.out {
+    right: 40%;
+}
+
+#overlay.right.out {
+    left: 60%;
 }
 
 .overlay-header, .overlay-pod {
@@ -161,7 +177,27 @@ div.info:hover {
     display: inline-block;
     color: #000;
     font-size: 28px;
-    padding-left: 16px
+    padding-right: 16px;
+    padding-left: 16px;
+}
+
+.overlay-title.left {
+    padding-left: 16px;
+}
+
+.overlay-title.right {
+    padding-right: 16px;
+}
+
+.overlay-pod {
+    margin-bottom: 8px;
+}
+
+.overlay-body {
+    overflow-y: auto;
+    overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
+    white-space: nowrap;
 }
 
 /* The actual popup (appears on top): https://www.w3schools.com/howto/howto_js_popup.asp */
