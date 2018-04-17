@@ -86,7 +86,7 @@ $(document).on("click",".image-button-right", function (event) {
     '<div class="overlay-header">' +
         '<a onclick="closeOverlay()"><span class="fa fa-angle-left fa-2x"/><span class="overlay-title slab-font">Members\' Lobby</span></a>' +
     '</div><div id="custom-scroll" class="overlay-body">' +
-        '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
+        '<div class="overlay-pod"><p><strong></strong></p></div>' +
         '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
         '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
         '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
@@ -99,7 +99,7 @@ $(document).on("click",".image-button-right", function (event) {
     '<div class="overlay-header">' +
         '<a onclick="closeOverlay()"><span class="fa fa-angle-left fa-2x"/><span class="overlay-title slab-font">Aye Lobby</span></a>' +
     '</div><div id="custom-scroll" class="overlay-body">' +
-        '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
+        '<div class="overlay-pod"><p><strong></strong></p></div>' +
         '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
         '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
         '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
@@ -112,7 +112,7 @@ $(document).on("click",".image-button-right", function (event) {
     '<div class="overlay-header">' +
         '<a onclick="closeOverlay()"><span class="fa fa-angle-left fa-2x"/><span class="overlay-title slab-font">Commons Chamber</span></a>' +
     '</div><div id="custom-scroll" class="overlay-body">' +
-        '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
+        '<div class="overlay-pod"><p><strong></strong></p></div>' +
         '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
         '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
         '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
@@ -143,11 +143,15 @@ $(document).on("click",".image-button-right", function (event) {
     '<div class="overlay-header">' +
         '<a onclick="closeOverlay()"><span class="fa fa-angle-right fa-2x"/><span class="overlay-title slab-font">Royal Gallery</span></a>' +
     '</div><div id="custom-scroll" class="overlay-body">' +
-        '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
-        '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
-        '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
-        '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
-        '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
+        '<div class="overlay-pod"><p><strong>' +
+        'This space is used for meetings and large gatherings, including being on the route of the Queen\'s walk for the Opening of Parliament.</strong></p></div>' +
+        '<div class="overlay-pod">' +
+        '<img alt="Royal Gallery" src="https://farm4.staticflickr.com/3160/2700327415_9862d63585_b.jpg"/>' +
+        '<p>While there are several paintings of past Monarchs on the wall, the majority of the wall space is taken over by two paintings depicting scenes from the Napoleonic Wars. ' +
+        'This was the largest room I visited as a part of my tour besides Westminster Hall.</p></div>' +
+        '<div class="overlay-pod">' +
+        '<img alt="Royal Walk" src="https://us.hellomagazine.com/images/stories/1/2016/05/18/000/177/404/gallery_5_3.jpg"/>' +
+        '<p>Once the Queen puts on the Imperial State Crown, she processes through here on her way to the Lords Chamber.</p></div>' +
     '</div></div>');
  }
 
@@ -156,7 +160,7 @@ $(document).on("click",".image-button-right", function (event) {
     '<div class="overlay-header">' +
         '<a onclick="closeOverlay()"><span class="fa fa-angle-right fa-2x"/><span class="overlay-title slab-font">Peers\' Lobby</span></a>' +
     '</div><div id="custom-scroll" class="overlay-body">' +
-        '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
+        '<div class="overlay-pod"><p><strong></strong></p></div>' +
         '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
         '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
         '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
@@ -169,7 +173,7 @@ $(document).on("click",".image-button-right", function (event) {
     '<div class="overlay-header">' +
         '<a onclick="closeOverlay()"><span class="fa fa-angle-right fa-2x"/><span class="overlay-title slab-font">Prince\'s Chamber</span></a>' +
     '</div><div id="custom-scroll" class="overlay-body">' +
-        '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
+        '<div class="overlay-pod"><p><strong></strong></p></div>' +
         '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
         '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
         '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
@@ -182,7 +186,7 @@ $(document).on("click",".image-button-right", function (event) {
     '<div class="overlay-header">' +
         '<a onclick="closeOverlay()"><span class="fa fa-angle-right fa-2x"/><span class="overlay-title slab-font">Lords Chamber</span></a>' +
     '</div><div id="custom-scroll" class="overlay-body">' +
-        '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
+        '<div class="overlay-pod"><p><strong></strong></p></div>' +
         '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
         '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
         '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
