@@ -120,42 +120,40 @@ div.info:hover {
 }
 
 #overlay {
-    visibility: hidden;
     position: absolute;
     padding-left: 8px;
     padding-right: 8px;
     background-color: rgba(255, 255, 255, 0.9);
     overflow: hidden;
-    width: 0;
+    width: 0%;
     max-width: 40%;
     bottom: 0;
     height: 100%;
-    transition: .4s ease;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s ease-in-out;
 }
 
 #overlay.right {
-    visibility: hidden;
-    left: 100%;
-    right: 0;
+    right: 0%;
 }
 
 #overlay.left {
-    visibility: hidden;
-    left: 0;
     right: 100%;
 }
 
 #overlay.out {
-    width: 40%;
     visibility: visible;
+    width: 40%;
+    opacity: 1;
 }
 
 #overlay.left.out {
-    right: 40%;
+    right: 60%;
 }
 
 #overlay.right.out {
-    left: 60%;
+    right: 0%;
 }
 
 .overlay-header, .overlay-pod {
@@ -181,20 +179,27 @@ div.info:hover {
     padding-left: 16px;
 }
 
-.overlay-title.left {
-    padding-left: 16px;
-}
-
-.overlay-title.right {
-    padding-right: 16px;
-}
-
 .overlay-pod {
     margin-bottom: 8px;
+    margin-right: 4px;
+    white-space: pre-wrap;
+}
+
+.overlay-pod img {
+    max-width: 100%;
+}
+
+.overlay-pod p {
+    margin: 0;
+}
+
+.overlay-pod img + p:first-of-type, .overlay-pod p + p {
+    margin-top: 8px;
 }
 
 .overlay-body {
-    overflow-y: auto;
+    max-height: 86%;
+    overflow-y: scroll;
     overflow-x: hidden;
 	-webkit-overflow-scrolling: touch;
     white-space: nowrap;
