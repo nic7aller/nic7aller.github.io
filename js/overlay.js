@@ -1,26 +1,17 @@
-$(document).on("click",".image-button-right", function (event) {
-    openOverlay(event, $(this));
- });
-
- $(document).on("click",".image-button-left", function (event) {
-    openOverlay(event, $(this));
- });
-
- function openOverlay(event, div_area) {
+$(document).on("click",".image-button", function (event) {
     event.preventDefault();
-    var id = div_area.attr('id');
     closeOverlay();
-    displayCorrectOverlay(id);
+    displayCorrectOverlay($(this).attr('id'));
     $("#overlay").addClass("out");
- }
+});
 
- function closeOverlay() {
+function closeOverlay() {
     if ($("#overlay").hasClass("out")) {
         $("#overlay").removeClass("out");
     }
- }
+}
 
- function displayCorrectOverlay(id) {
+function displayCorrectOverlay(id) {
     if (id == "westminster") {
         displayWestminster();
     } else if (id == "central") {
@@ -29,8 +20,8 @@ $(document).on("click",".image-button-right", function (event) {
         displayRobing();
     } else if (id == "prince") {
          displayPrince();
-    } else if (id == "peers") {
-         displayPeers();
+    } else if (id == "stephen") {
+         displayStephen();
     } else if (id == "gallery") {
          displayGallery();
     } else if (id == "lords") {
@@ -42,9 +33,9 @@ $(document).on("click",".image-button-right", function (event) {
     } else if (id == "aye") {
         displayAye();
     }
- }
+}
 
- function displayWestminster() {
+function displayWestminster() {
     $("#overlay").replaceWith('<div id="overlay" class="left">' +
     '<div class="overlay-header">' +
         '<a onclick="closeOverlay()"><span class="fa fa-angle-left fa-2x"/><span class="overlay-title slab-font">Westminster Hall</span></a>' +
@@ -52,7 +43,7 @@ $(document).on("click",".image-button-right", function (event) {
         '<div class="overlay-pod"><p><b>Commisioned in 1097 and completed by 1099, Westminster Hall is the oldest existing building of the original Palace of Westminster.</b></p>' +
         '<p>This was the starting and ending room on my tour of Parliament.</p></div>' +
         '<div class="overlay-pod">' +
-        '<img alt="Hammer-beam roof" src="https://assets3.parliament.uk/iv/main-large//ImageVault/Images/id_1044/scope_0/ImageVaultHandler.aspx.jpg"/>' +
+        '<img alt="Hammer-beam roof" src="https://farm4.staticflickr.com/3295/2700357003_189d515ea3_o.jpg"/>' +
         '<p>The iconic hammer-beam roof was commissioned by Richard II in 1393. ' +
         'At 68 by 240 feet, it was the largest timber roof of the medieval times in Northern Europe.</p>' +
         '<p>I thought the roof was magnificent, but pictures of the roof tend to not turn out very well due to all the natural light. ' +
@@ -64,10 +55,10 @@ $(document).on("click",".image-button-right", function (event) {
         'The number of the glass scrolls lit is determined by the tide at the time of day. ' +
         'By hanging over the entrance to the rest of the Palace, this work symbolizes "women\'s long-awaited access to democracy".</p></div>' +
     '</div></div>');
- }
+}
 
- function displayCentral() {
-    $("#overlay").replaceWith('<div id="overlay" class="left">' +
+function displayCentral() {
+    $("#overlay").replaceWith('<div id="overlay" class="right">' +
     '<div class="overlay-header">' +
         '<a onclick="closeOverlay()"><span class="fa fa-angle-left fa-2x"/><span class="overlay-title slab-font">Central Lobby</span></a>' +
     '</div><div id="custom-scroll" class="overlay-body">' +
@@ -79,48 +70,69 @@ $(document).on("click",".image-button-right", function (event) {
         'The term "lobbying" originated from constituents meeting in the Central Lobby to meet with their MPs. ' +
         'Even today while Parliament is in session, UK citizens can meet their MPs without an appointment, though one is recommended.</div>' +
     '</div></div>');
- }
+}
 
- function displayPM() {
+function displayPM() {
     $("#overlay").replaceWith('<div id="overlay" class="left">' +
     '<div class="overlay-header">' +
         '<a onclick="closeOverlay()"><span class="fa fa-angle-left fa-2x"/><span class="overlay-title slab-font">Members\' Lobby</span></a>' +
     '</div><div id="custom-scroll" class="overlay-body">' +
-        '<div class="overlay-pod"><p><strong></strong></p></div>' +
-        '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
-        '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
-        '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
-        '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
+        '<div class="overlay-pod"><p><strong>Littered with past Prime Ministers, this room acts as an antechamber for the House of Commons.</strong></p></div>' +
+        '<div class="overlay-pod">' +
+        '<img alt="Members\' Lobby" src="https://farm4.staticflickr.com/3132/2700327403_e1af599a2b_o.jpg">' +
+        '<p>The Lobby has contains a bust or statue of past Prime Ministers, including Margret Thatcher and Winston Churchill. ' +
+        'In fact, every Prime Minster will have a statue or a bust made and placed in this room. ' +
+        'In 100 years that room might look like Sir John Soane\'s House.</p></div>' +
+        '<div class="overlay-pod">' +
+        '<img alt="Churchill Arch" src="https://assets3.parliament.uk/iv/main-large//ImageVault/Images/id_314/scope_0/ImageVaultHandler.aspx.jpg">' +
+        '<p>After the bombings of World War II, the Members\' Lobby was heavily damaged and needed to be repaired. ' +
+        'Winston Churchill suggested keeping the war-damaged arch as a reminder of the terrible war, as the arch is above the entrance into the Commons Chamber. ' +
+        'The damaged arch now has the name of Churchill Arch in recognition of his suggestion.</p></div>' +
+        '<div class="overlay-pod"><p><strong>Fun Fact</strong></p>' +
+        '<p>It is a tradition that the Monarch cannot enter the Commons Chamber, sparking a tradition of the House of Commons to be reluctant towards the Monarch. ' +
+        'For the Opening of Parliament, a messanger with a black rod must go to the doors under Churchill arch and use the rod to knock on the door three times. ' +
+        'MPs of the House of Commons then, nonchalatly and on their own time, head to the Lords Chamber to hear the Queen\'s speech. ' +
+        'The door has been visible damaged from the knocking over the years.</p></div>' +
     '</div></div>');
- }
+}
 
- function displayAye() {
+function displayAye() {
     $("#overlay").replaceWith('<div id="overlay" class="left">' +
     '<div class="overlay-header">' +
         '<a onclick="closeOverlay()"><span class="fa fa-angle-left fa-2x"/><span class="overlay-title slab-font">Aye Lobby</span></a>' +
     '</div><div id="custom-scroll" class="overlay-body">' +
-        '<div class="overlay-pod"><p><strong></strong></p></div>' +
-        '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
-        '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
-        '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
-        '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
+        '<div class="overlay-pod"><p><strong>MPs in the House of Commons gather here to vote "aye" on a bill.</strong></p></div>' +
+        '<div class="overlay-pod">' +
+        '<img alt="Aye Lobby" src="https://farm6.staticflickr.com/5459/17549293252_f1e14b76a6_o.jpg">' +
+        '<p>In a small room just North of the Commons Chamber on the side of the government, once voting start for a bill MPs only have a short time to come to this lobby to vote for a bill. ' +
+        'For those voting against a bill, they must go to the No Lobby to the South on the side of the opposition.</p></div>' +
     '</div></div>');
- }
+}
 
- function displayCommons() {
+function displayCommons() {
     $("#overlay").replaceWith('<div id="overlay" class="left">' +
     '<div class="overlay-header">' +
         '<a onclick="closeOverlay()"><span class="fa fa-angle-left fa-2x"/><span class="overlay-title slab-font">Commons Chamber</span></a>' +
     '</div><div id="custom-scroll" class="overlay-body">' +
-        '<div class="overlay-pod"><p><strong></strong></p></div>' +
-        '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
-        '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
-        '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
+        '<div class="overlay-pod"><p><strong>Home to the House of Commons, known for their lively debates.</strong></p></div>' +
+        '<div class="overlay-pod">' +
+        '<img alt="Commons Chamber" src="https://farm4.staticflickr.com/3006/2700311137_1f07f4cfbe_o.jpg">' +
+        '<p>Unlike the ornate Lords Chamber, the Commons Chamber is simpler. ' +
+        'This is due to the House of Commons being more related to the common folk, i.e. non-nobility, and the constrained budget of the repairs to the room after the bombings of World War II. ' +
+        'For example, there is little gold in the room as well as normal windows over the stain glass windows found in the Lords Chamber. ' +
+        'The Speaker\'s Chair, which is shown above, is simple in comparison to the Royal Throne in the Lords Chamber.</p></div>' +
+        '<div class="overlay-pod"><p>' +
+        'The gift shop seemed to reflect how the status of the House of Lords is more "noble" than that of the House of Commons with the prices and goods sold with House of Lords branding being more expensive than that of the House of Commons merchandise.</p></div>' +
+        '<div class="overlay-pod">' +
+        '<img alt="House of Commons" src="https://farm2.staticflickr.com/1630/25743557151_4a862f2b02_o.jpg">' +
+        '<p>The set up of the House of Commons is designed based off of how the original House was organized with opposing benches. ' +
+        'The government, the majority party and their allies, sit on the benches to the right of the Speaker\'s Chair, while the opposition sits on the opposing side. ' +
+        'During a session, the red lines in the carpeting act</p></div>' +
         '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
     '</div></div>');
- }
+}
 
- function displayRobing() {
+function displayRobing() {
     $("#overlay").replaceWith('<div id="overlay" class="right">' +
     '<div class="overlay-header">' +
         '<a onclick="closeOverlay()"><span class="fa fa-angle-right fa-2x"/><span class="overlay-title slab-font">Robing Room</span></a>' +
@@ -136,9 +148,9 @@ $(document).on("click",".image-button-right", function (event) {
         '<p>This important room contain the Chair of State, and is where the Queen puts on the Imperial State Crown. ' +
         'The only time when this crown is worn outside of coronation day, as well as the only time when the Queen is actually at Parliamnet, is for the (usually) annual Opening of Parliament.</p></div>' +
     '</div></div>');
- }
+}
 
- function displayGallery() {
+function displayGallery() {
     $("#overlay").replaceWith('<div id="overlay" class="right">' +
     '<div class="overlay-header">' +
         '<a onclick="closeOverlay()"><span class="fa fa-angle-right fa-2x"/><span class="overlay-title slab-font">Royal Gallery</span></a>' +
@@ -151,45 +163,64 @@ $(document).on("click",".image-button-right", function (event) {
         'This was the largest room I visited as a part of my tour besides Westminster Hall.</p></div>' +
         '<div class="overlay-pod">' +
         '<img alt="Royal Walk" src="https://us.hellomagazine.com/images/stories/1/2016/05/18/000/177/404/gallery_5_3.jpg"/>' +
-        '<p>Once the Queen puts on the Imperial State Crown, she processes through here on her way to the Lords Chamber.</p></div>' +
+        '<p>Once the Queen puts on the Imperial State Crown, she processes through here on her way to the Lords Chamber.' +
+        'The whole entire event of course is televised for people to watch at home.</p></div>' +
     '</div></div>');
- }
+}
 
- function displayPeers() {
-    $("#overlay").replaceWith('<div id="overlay" class="right">' +
+function displayStephen() {
+    $("#overlay").replaceWith('<div id="overlay" class="left">' +
     '<div class="overlay-header">' +
-        '<a onclick="closeOverlay()"><span class="fa fa-angle-right fa-2x"/><span class="overlay-title slab-font">Peers\' Lobby</span></a>' +
+        '<a onclick="closeOverlay()"><span class="fa fa-angle-right fa-2x"/><span class="overlay-title slab-font">St. Stephen\'s Hall</span></a>' +
     '</div><div id="custom-scroll" class="overlay-body">' +
-        '<div class="overlay-pod"><p><strong></strong></p></div>' +
-        '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
-        '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
-        '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
-        '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
+        '<div class="overlay-pod"><p><strong>Connecting Westminster Hall to the rest of the Palace with beautiful art.</strong></p></div>' +
+        '<div class="overlay-pod">' +
+        '<img alt="St. Stephen\'s Hall" src="https://farm4.staticflickr.com/3189/2700369675_4531fe2a6c_o.jpg">' +
+        '<p>This room was built over St. Stephen\'s Chapel, the original location of the House of Commons. ' +
+        'It is shocking going from Westminster Hall, which lacks in color and art, into St. Stephen\'s Hall with all the ornateness of the rebuilt Palace.</p></div>' +
+        '<div class="overlay-pod">' +
+        '<img alt="St. Stephen\'s Artwork" src="https://farm4.staticflickr.com/3037/2701192648_5272decf07_o.jpg">' +
+        '<p>Lining the sides of the hall are statues of famous MPs throught history, and paintings of significant historical events in the UK.</p></div>' +
     '</div></div>');
- }
+}
 
- function displayPrince() {
+function displayPrince() {
     $("#overlay").replaceWith('<div id="overlay" class="right">' +
     '<div class="overlay-header">' +
         '<a onclick="closeOverlay()"><span class="fa fa-angle-right fa-2x"/><span class="overlay-title slab-font">Prince\'s Chamber</span></a>' +
     '</div><div id="custom-scroll" class="overlay-body">' +
-        '<div class="overlay-pod"><p><strong></strong></p></div>' +
-        '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
-        '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
-        '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
-        '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
+        '<div class="overlay-pod"><p><strong>On the opposite side of the wall of the Throne, this is the last stop for the Queen on her way to the Throne for the Opening of Parliament.</strong></p></div>' +
+        '<div class="overlay-pod">' +
+        '<img alt="Prince\'s Chamber" src="https://farm9.staticflickr.com/8115/8660441468_68964cc20b_o.jpg">' +
+        '<p>This room is contains potraits of many members of the Tudor line, as well as the centrally located statue of Queen Victoria. ' +
+        'The statue can be seen all the way across the Royal Gallery from the exit from the Robing Room.</p>' +
+        '<p>The reason for this was to help give Queen Victoria, the person to commission the restoration of the Palace of Westminster, more confidence during the Opening of Parliament. ' +
+        'Queen Victoria left the interior design of the Palace up to her husband who wanted to the design to be liked by his wife. ' +
+        'He told Victoria to just focus on herself while walking towards the Lords Chamber to help her on the important day.</p></div>' +
     '</div></div>');
- }
+}
 
- function displayLords() {
+function displayLords() {
     $("#overlay").replaceWith('<div id="overlay" class="right">' +
     '<div class="overlay-header">' +
         '<a onclick="closeOverlay()"><span class="fa fa-angle-right fa-2x"/><span class="overlay-title slab-font">Lords Chamber</span></a>' +
     '</div><div id="custom-scroll" class="overlay-body">' +
-        '<div class="overlay-pod"><p><strong></strong></p></div>' +
-        '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
-        '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
-        '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
-        '<div class="overlay-pod"><p>Random text in Latin</p></div>' +
+        '<div class="overlay-pod"><p><strong>' +
+        'The House of Lords meet in "the most lavishly-decorated room in the Palace of Westminster".</strong></p></div>' +
+        '<div class="overlay-pod">' +
+        '<img alt="Royal Throne" src="https://c1.staticflickr.com/4/3007/2701203046_d64e596412_b.jpg"/>' +
+        '<p>The Lords Chamber contains all three sections of Parliament on the Opening of Parliament, including the Sovereign. ' +
+        'While the Royal Throne is in this Chamber, it is not often that you will see the Queen sitting in it.</p></div>' +
+        '<div class="overlay-pod"><p><strong>Fun Fact</strong></p>' +
+        '<p>On November 5, 1605, Guy Fawkes was found under the Lords Chamber with barrels of gunpowder. ' +
+        'What is now known as the Gunpowder Plot was foiled, and Guy Fawkes was tortured to give up the other conspirators. ' +
+        'This is one of the most well documented cases of the torture methods of that time.</p>' +
+        '<p>As a part of Guy Fawkes Day, November 5, the Yeomen Warders search the grounds of Parliament in a ceremonial manner to ensure the grounds are safe.</p></div>' +
+        '<div class="overlay-pod">' +
+        '<img alt="Election of the first Lord Speaker" src="https://farm4.staticflickr.com/3249/2713947218_385bbfd678_o.jpg">' +
+        '<p>The House of Lords is an alternative to the United States\' Senate. ' +
+        'Whereas Senators are elected, Lords are appointed based on their expertise in various matters. ' +
+        'This House serves to offer more guidance on bills that pertain to the expertise of individual Members. ' +
+        'Bills still need to pass a vote through here for it to become a law.</p></div>' +
     '</div></div>');
- }
+}
