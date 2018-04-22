@@ -186,6 +186,10 @@ div.info:hover {
     white-space: pre-wrap;
 }
 
+.overlay-pod:last-child {
+    margin-bottom: 32px;
+}
+
 .overlay-pod img {
     display: block;
     margin: auto;
@@ -195,6 +199,9 @@ div.info:hover {
 .overlay-pod p {
     margin: 0;
     max-width: 100%;
+}
+.overlay-pod p a, div.info p a {
+    font-style: italic;
 }
 
 .overlay-pod img + p:first-of-type, .overlay-pod p + p {
