@@ -1,5 +1,13 @@
 /*! Based on code from W3Schools, modified */
 
+$(function () {
+    $.get('templates/sidebar.hbs', function (data) {
+        var template = Handlebars.compile(data);
+        $("#theSidenav").html(template);
+        closeArrowToOpenArrowIfLowRes();
+    }, 'html');
+});
+
 function openNav() {
     $(".fades").fadeIn();
     $(".nav-name").css("color", "#fff");
@@ -66,7 +74,7 @@ $(window).resize(function() {
     }
 });
 
-$(".closebtn").click(function() {
+$("#theSidenav").on("click", ".closebtn", function() {
     $("#closeArrow").hasClass("fa-angle-left") ? (closeNav()) : (openNav());
 });
 
