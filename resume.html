@@ -16,482 +16,52 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body onload="closeArrowToOpenArrowIfLowRes()">
-    <div id="theSidenav" class="sidenav">
-        <div class="branding col-xs-12">
-            <a href="../index.html"><img class="nav-logo" src="../pics/N7ChipWRev.png"></a>
-            <a><span class="nav-name">Nic Siebenaller</span></a>
-        </div>
-        <div class="sideLinks col-xs-10">
-            <a href="">
-                <span class="nav-close-link fa fa-suitcase"/>
-                <span class="fades link">Resume</span>
-            </a>
-            <a href="../contact.html">
-                <span class="nav-close-link fa fa-user-circle-o"/>
-                <span class="fades link">Contact</span>
-            </a>
-            <a href="../arch5798.html">
-                <span class="nav-close-link fa fa-compass"/>
-                <span class="fades link">ARCH 5798</span>
-            </a>
-            <a href="https://www.linkedin.com/in/nicholassiebenaller/">
-                <span class="nav-close-link fa fa-linkedin"/>
-                <span class="fades link">nicholassiebenaller</span>
-            </a>
-            <a href="https://www.github.com/nic7aller/">
-                <span class="nav-close-link fa fa-github-alt"/>
-                <span class="fades link">nic7aller</span>
-            </a>
-        </div>
-        <div href="javascript:void(0)" class="closebtn col-xs-2">
-            <span id="closeArrow" class="fa fa-angle-left"/>
-        </div>
-    </div>
-
+<body>
+    <div id="theSidenav" class="sidenav"></div>
     <div id="main" class="container-fluid">
         <div class="center-div">
-        <div class="wrapper" id="custom-scroll">
-            <ul class="nav nav-tabs list" id="resume-tabs">
-                <li class="active"><a href="#edu" data-toggle="tab" aria-expanded="true">Education</a></li>
-                <li class=""><a href="#work" data-toggle="tab" aria-expanded="false">Work Experience</a></li>
-                <li class=""><a href="#skills" data-toggle="tab" aria-expanded="false">Skills</a></li>
-                <li class=""><a href="#projects" data-toggle="tab" aria-expanded="false">Projects</a></li>
-                <li class=""><a href="#courses" data-toggle="tab" aria-expanded="false">Coursework</a></li>
-                <li class=""><a href="#extra" data-toggle="tab" aria-expanded="false">Extracurriculars</a></li>
-            </ul>
+            <div class="wrapper" id="custom-scroll">
+                <ul class="nav nav-tabs list" id="resume-tabs">
+                    <li class="active"><a href="#edu" data-toggle="tab" aria-expanded="true">Education</a></li>
+                    <li class=""><a href="#work" data-toggle="tab" aria-expanded="false">Work Experience</a></li>
+                    <li class=""><a href="#skills" data-toggle="tab" aria-expanded="false">Skills</a></li>
+                    <li class=""><a href="#projects" data-toggle="tab" aria-expanded="false">Projects</a></li>
+                    <li class=""><a href="#courses" data-toggle="tab" aria-expanded="false">Coursework</a></li>
+                    <li class=""><a href="#extra" data-toggle="tab" aria-expanded="false">Extracurriculars</a></li>
+                </ul>
+            </div>
+            <div id="tabContent" class="tab-content">
+                <div class="tab-pane active in" id="edu"></div>
+                <div class="tab-pane" id="work"></div>
+                <div class="tab-pane" id="skills"></div>
+                <div class="tab-pane" id="projects"></div>
+                <div class="tab-pane" id="courses"></div>
+                <div class="tab-pane" id="extra"></div>
+            </div>
         </div>
-        <div id="tabContent" class="tab-content">
-            <div class="tab-pane active in" id="edu">
-                <div class="container-fluid">
-                    <div class="panel-group">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" href="#collapse-edu2">The Ohio State University, Columbus, Ohio</a>
-                                </h4>
-                            </div>
-                            <div id="collapse-edu2" class="panel-collapse collapse in">
-                                <div class="panel-body">
-                                    <h5>B.S. in Computer Science and Engineering</h5>
-                                    <h6>August 2015 - May 2019</h6>
-                                    <h6>Major GPA: 3.751</h6>
-                                    <h6>GPA: 3.638</h6>
-                                    <h6>Concentration in Artificial Intelligence</h6>
-                                    <h6>Honors Engineering Student</h6>
-                                    <h6>Political Science Minor</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" href="#collapse-edu1">St. Francis de Sales High School, Toledo, Ohio</a>
-                                </h4>
-                            </div>
-                            <div id="collapse-edu1" class="panel-collapse collapse in">
-                                <div class="panel-body">
-                                    <h5>Graduated Summa Cum Laude</h5>
-                                    <h6>August 2011 - May 2015</h6>
-                                    <h6>GPA: 4.762</h6>
-                                    <h6>Class of 2015 Computer Science Subject Award</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="tab-pane" id="work">
-                <div class="container-fluid">
-                    <div class="panel-group">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" href="#collapse-work5">Software Development Engineer (SDE) Intern, May 2018 - August 2018</a>
-                                </h4>
-                            </div>
-                            <div id="collapse-work5" class="panel-collapse collapse in">
-                                <div class="panel-body">
-                                    <h5>Amazon, Seattle, WA</h5>
-                                    <h6>- [TBD]</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" href="#collapse-work4">Developer Intern / Part-time Developer, May 2017 - May 2018</a>
-                                </h4>
-                            </div>
-                            <div id="collapse-work4" class="panel-collapse collapse in">
-                                <div class="panel-body">
-                                    <h5>Lexon Corporation, Dublin, OH</h5>
-                                    <h6>- Worked on Lexon’s main product C. Core 10 developing full stack for "screens" using Java EE, JSF, JPA, and Oracle SQL</h6>
-                                    <h6>- Collaborated with business analysts and other developers to build the best solutions to improve user experience</h6>
-                                    <h6>- Created vital screens to be deployed in future release of C. Core 10</h6>
-                                    <h6>- Continued developing software during the school year part-time</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" href="#collapse-work3">Undergraduate Teaching Assistant, August 2016 - May 2017</a>
-                                </h4>
-                            </div>
-                            <div id="collapse-work3" class="panel-collapse collapse in">
-                                <div class="panel-body">
-                                    <h5>Department of Engineering Education, Columbus, OH</h5>
-                                    <h6>- Assisting over 70 students in Fundamentals of Engineering class and with their design-build project</h6>
-                                    <h6>- Taught engineering concepts using Microsoft Excel, MATLAB, C++, and SolidWorks</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" href="#collapse-work2">Information Systems Intern, June 2016 - August 2016</a>
-                                </h4>
-                            </div>
-                            <div id="collapse-work2" class="panel-collapse collapse in">
-                                <div class="panel-body">
-                                    <h5>Toledo Museum of Art, Toledo, OH</h5>
-                                    <h6>- Worked with users to troubleshoot technology issues</h6>
-                                    <h6>- Imaged and set up new computers to the specifications of the user</h6>
-                                    <h6>- Upgraded anti-virus service on all computers in an efficient manner</h6>
-                                    <h6>- Maintained and improved inventory of computers</h6>
-                                    <h6>- Organized recycling of outdated technology</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" href="#collapse-work1">Student Cook, August 2015 - April 2016</a>
-                                </h4>
-                            </div>
-                            <div id="collapse-work1" class="panel-collapse collapse in">
-                                <div class="panel-body">
-                                    <h5>Traditions at Scott, Columbus, OH</h5>
-                                    <h6>- Worked in fast-paced kitchens of the dining hall preparing food and serving customers</h6>
-                                    <h6>- Managed a full schedule while working more than 12 hours a week</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="tab-pane" id="skills">
-                <div class="container-fluid">
-                    <div class="panel-group">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" href="#collapse-skillsA">Languages - Advanced</a>
-                                </h4>
-                            </div>
-                            <div id="collapse-skillsA" class="panel-collapse collapse in">
-                                <div class="panel-body">
-                                    <h6>- Java</h6>
-                                    <h6>- C#</h6>
-                                    <h6>- Python</h6>
-                                    <h6>- C/C++</h6>
-                                    <h6>- MATLAB</h6>
-                                    <h6>- XML</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" href="#collapse-skillsK">Languages - Knowledgeable</a>
-                                </h4>
-                            </div>
-                            <div id="collapse-skillsK" class="panel-collapse collapse in">
-                                <div class="panel-body">
-                                    <h6>- HTML5</h6>
-                                    <h6>- CSS</h6>
-                                    <h6>- SQL</h6>
-                                    <h6>- mongoDB</h6>
-                                    <h6>- JavaScript</h6>
-                                    <h6>- Scala</h6>
-                                    <h6>- Node.js</h6>
-                                    <h6>- x86 Assembly</h6>                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#collapse-frameworks">Frameworks</a>
-                                    </h4>
-                                </div>
-                                <div id="collapse-frameworks" class="panel-collapse collapse in">
-                                    <div class="panel-body">
-                                        <h6>- JAX-RS</h6>
-                                        <h6>- JPA</h6>
-                                        <h6>- JSF</h6>
-                                        <h6>- Mockito</h6>
-                                        <h6>- Morphia</h6>
-                                        <h6>- jQuery</h6>
-                                        <h6>- Flask</h6>
-                                        <h6>- Apache Cordova</h6>
-                                        <h6>- Monogame</h6>                                 
-                                    </div>
-                                </div>
-                            </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" href="#collapse-skillsP">Software</a>
-                                </h4>
-                            </div>
-                            <div id="collapse-skillsP" class="panel-collapse collapse in">
-                                <div class="panel-body">
-                                    <h6>- Git</h6>
-                                    <h6>- IntelliJ IDEA</h6>
-                                    <h6>- Visual Studio</h6>
-                                    <h6>- Android Studio</h6>
-                                    <h6>- Eclipse</h6>
-                                    <h6>- SolidWorks</h6>
-                                    <h6>- Microsoft Office</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="tab-pane" id="projects">
-                <div class="container-fluid">
-                    <div class="panel-group">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" href="#collapse-project7">CSE 3902 2D Platformer Game Project, January 2017 - April 2017</a>
-                                </h4>
-                            </div>
-                            <div id="collapse-project7" class="panel-collapse collapse in">
-                                <div class="panel-body">
-                                    <h5>Class Team Project</h5>
-                                    <h6>- Collaborated with 4 other students on an Agile development team to build a Super Mario Bros. clone</h6>
-                                    <h6>- Focused on Object-Oriented software design using C# and Monogame</h6>
-                                    <h6>- Led team meetings and software design discussions</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" href="#collapse-project6">BiP Switch Project, March 2017</a>
-                                </h4>
-                            </div>
-                            <div id="collapse-project6" class="panel-collapse collapse in">
-                                <div class="panel-body">
-                                    <h5>MakeOHI/O Hackathon Project (Solo)</h5>
-                                    <h6>- Built a smart light switch that can be controlled via any device with access to an internet browser on the same network as well as a touchscreen interface</h6>
-                                    <h6>- Utilized a Raspberry Pi 2 and Flask framework to create a web server to control a relay</h6>
-                                    <h6>- Displayed current weather as well as an inspirational quote</h6>
-                                </div>
-                                <div class="panel-footer">Check out the project
-                                    <a href="https://drive.google.com/open?id=0B_5uob2tliwgWnp0ZFdnZXhIeDg">here</a> and on <a href="https://GitHub.com/nic7aller/bip-switch">GitHub</a></div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" href="#collapse-project5">CatScratch, January 2017</a>
-                                </h4>
-                            </div>
-                            <div id="collapse-project5" class="panel-collapse collapse in">
-                                <div class="panel-body">
-                                    <h5>BoilerMake 2017 Hackathon Project</h5>
-                                    <h6>- Crafted a web app that replaced profanity and harassing words in tweets with "SPACE CAT"</h6>
-                                    <h6>- Integrated the Tweepy API in a Python script to query tweets and the Flask framework to communicate with app</h6>
-                                    <h6>- Utilized Node.js, ExpressJS, and Pug with JavaScript to create web app to display and search for tweets</h6>
-                                    <h6>- Used MongoDB Atlas to store modified tweets</h6>
-                                    <h6>- Submitted as a project to support the fight against online harassment and cyberbullying</h6>
-                                </div>
-                                <div class="panel-footer">Check out the project on <a href="https://GitHub.com/ggersh/cat-scratch">GitHub</a></div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" href="#collapse-project4">FootPass, November 2016</a>
-                                </h4>
-                            </div>
-                            <div id="collapse-project4" class="panel-collapse collapse in">
-                                <div class="panel-body">
-                                    <h5>HackOHI/O 2016 Hackathon Project</h5>
-                                    <h6>- Created a web app that let users search for a location and navigate there with an on-screen compass</h6>
-                                    <h6>- Built using AngularJS and Apache Cordova framework so the web app could be a native Android or iOS app</h6>
-                                    <h6>- Integrated the Google Places API into app for finding location search results</h6>
-                                </div>
-                                <div class="panel-footer">Check out the project on <a href="https://GitHub.com/jmitten15/FootPass">GitHub</a></div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" href="#collapse-project3">ModemCare, November 2016</a>
-                                </h4>
-                            </div>
-                            <div id="collapse-project3" class="panel-collapse collapse in">
-                                <div class="panel-body">
-                                    <h5>ArchHacks 2016 Hackathon Project</h5>
-                                    <h6>- Created a software suite to allow for the transfer of medical forms over sound through an aux cord</h6>
-                                    <h6>- Built receiving app to receive the forms with Electron framework and sending app with Ionic framework</h6>
-                                    <h6>- Implemented transfer of sound with QuietJS</h6>
-                                    <h6>- Offered a secure and simple way to fill out and transfer medical forms</h6>
-                                </div>
-                                <div class="panel-footer">Check out the project on <a href="https://GitHub.com/PascalRascal/ModemCare">GitHub</a></div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" href="#collapse-project2">Honors Robot Design Project, January 2016 - April 2016</a>
-                                </h4>
-                            </div>
-                            <div id="collapse-project2" class="panel-collapse collapse in">
-                                <div class="panel-body">
-                                    <h5>Class Team Project</h5>
-                                    <h6>- Designed and built an autonomous robot on a team of 4 students</h6>
-                                    <h6>- Documented entire process thoroughly from brainstorming to testing</h6>
-                                    <h6>- Lead documentation portion of project and aided in programming robot</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" href="#collapse-project1">BinoSwitch Project, September 2014 - January 2015</a>
-                                </h4>
-                            </div>
-                            <div id="collapse-project1" class="panel-collapse collapse in">
-                                <div class="panel-body">
-                                    <h5>Solo Project</h5>
-                                    <h6>- Constructed a functioning light switch controlled through an Android application including the ability to print a short</h6>
-                                    <h6>- Utilized an Arduino Uno and shields to create the switch and developed Android application with MIT's AppInventor</h6>
-                                </div>
-                                <div class="panel-footer">Check out the project <a href="https://drive.google.com/open?id=0B_5uob2tliwgcmt0aHdoVlNiSjg">here</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="tab-pane" id="courses">
-                    <div class="container-fluid">
-                        <div class="panel-group">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#collapse-technical">Technical Courses</a>
-                                    </h4>
-                                </div>
-                                <div id="collapse-technical" class="panel-collapse collapse in">
-                                    <div class="panel-body">
-                                        <h6>- Project: Design, Development, and Documentation of Interactive Systems (CSE 3902)</h6>
-                                        <h6>- Survey of Artificial Intelligence I: Basic Techniques (CSE 3521)</h6>
-                                        <h6>- Survey of Artificial Intelligence II: Advanced Techniques (CSE 5522)</h6>
-                                        <h6>- Computer Networking and Internet Technologies (CSE 3461)</h6>
-                                        <h6>- Principles of Programming Languages (CSE 3341)</h6>
-                                        <h6>- Introduction to Databases I (CSE 3241)</h6>
-                                        <h6>- Foundations I: Discrete Structures (CSE 2321)</h6>
-                                        <h6>- Foundations II: Data Structures and Algorithms (CSE 2421)</h6>
-                                        <h6>- Software I: Components (CSE 2221)</h6>
-                                        <h6>- Software II: Software Development and Design (CSE 2231)</h6>
-                                        <h6>- Systems I: Introduction to Low-Level Programming and Computer Organization (CSE 2421)</h6>
-                                        <h6>- Systems II: Introduction to Operating Systems (CSE 2431)</h6>
-                                        <h6>- Fundamentals of Engineering for Honors I (ENGR 1281.02H)</h6>
-                                        <h6>- Fundamentals of Engineering for Honors II (ENGR 1282.01H)</h6>
-                                        <h6>- Introduction to Digital Logic (ECE 2060)</h6>
-                                        <h6>- Introduction to Analog Systems and Circuits (ECE 2020)</h6>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" href="#collapse-other">Other Courses</a>
-                                    </h4>
-                                </div>
-                                <div id="collapse-other" class="panel-collapse collapse in">
-                                    <div class="panel-body">
-                                        <h6>- Social, Ethical, and Professional Issues in Computing (CSE 2501)</h6>
-                                        <h6>- Computing Ethics (PHILOS 1337)</h6>
-                                        <h6>- American Attitudes About Technology (ENGR 2367.01H)</h6>
-                                        <h6>- Foundations of Higher Mathematics (MATH 3345)</h6>                                  
-                                        <h6>- Linear Algebra (MATH 3568)</h6>
-                                        <h6>- Introduction to Statistics Engineering (STAT 3470)</h6>
-                                        <h6>- Accelerated Engineering Calculus II (MATH 2162.02)</h6>
-                                        <h6>- Politics of Evil (POLITSC 4894H)</h6>
-                                        <h6>- Political Manipulation (POLITSC 3905)</h6>
-                                        <h6>- Introduction to Political Theory (POLITSC 2400)</h6>
-                                        <h6>- Introduction to Comparative Politics (POLITSC 1200)</h6>
-                                        <h6>- London City and Culture (ARCH 5798)</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            <div class="tab-pane" id="extra">
-                <div class="container-fluid">
-                    <div class="panel-group">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" href="#collapse-extra3">Computer Science and Engineering Peer Mentoring, August 2017 - Present</a>
-                                </h4>
-                            </div>
-                            <div id="collapse-extra3" class="panel-collapse collapse in">
-                                <div class="panel-body">
-                                    <h5>Peer Mentor</h5>
-                                    <h6>- Helping incoming freshmen transition into the major in and out of their survey class</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" href="#collapse-extra2">OHI/O, March 2017 - Present</a>
-                                </h4>
-                            </div>
-                            <div id="collapse-extra2" class="panel-collapse collapse in">
-                                <div class="panel-body">
-                                    <h5>Vice Lead, HackOHI/O 2018</h5>
-                                    <h6>- Continued coordination with the Ohio Union on logistics of hackathon</h6>
-                                    <h6>- Actively worked to help make the hackathon run smoothly</h6>
-                                    <h6></h6>
-                                    <h5>Logistics Team Member, HackOHI/O 2017</h5>
-                                    <h6>- Coordinated plans with the Ohio Union to create a great hacker experience</h6>
-                                    <h6>- Actively worked to help make the hackathon run smoothly</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" href="#collapse-extra1">Buckeye Hackers, January 2016 - Present</a>
-                                </h4>
-                            </div>
-                            <div id="collapse-extra1" class="panel-collapse collapse in">
-                                <div class="panel-body">
-                                    <h5>General Member</h5>
-                                    <h6>- Participated in Kent Hack Enough 2016, ArchHacks 2016, HackOHI/O 2016, BoilerMake 2017, and MakeOHI/O 2017 with the group last year</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div></div>
     </div>
     
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js "></script>
-    <script src="js/sidebar.js "></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/resume.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <script>
+        $(function () {
+            var json = {
+                home: "../",
+                resume: "",
+                contact: "../contact.html",
+                arch5798: "../arch5798.html"
+            };
+            $.get('templates/sidebar.hbs', function (data) {
+                var template = Handlebars.compile(data);
+                $("#theSidenav").html(template(json));
+                closeArrowToOpenArrowIfLowRes();
+            }, 'html');
+            getResumeTemplates();
+        })
+    </script>
 </body>
 
 </html>

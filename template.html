@@ -16,9 +16,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body onload="closeArrowToOpenArrowIfLowRes()">
+<body>
     <div id="theSidenav" class="sidenav">
-        <!-- sidebar-template goes here -->
+        <!-- sidebar-template appears here -->
     </div>
 
     <div id="main" class="container-fluid">
@@ -32,6 +32,21 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js "></script>
     <script src="js/sidebar.js "></script>
+    <script>
+        $(function () {
+            var json = {
+                home: "",
+                resume: "../resume.html",
+                contact: "../contact.html",
+                arch5798: "../arch5798.html"
+            };
+            $.get('templates/sidebar.hbs', function (data) {
+                var template = Handlebars.compile(data);
+                $("#theSidenav").html(template(json));
+                closeArrowToOpenArrowIfLowRes();
+            }, 'html');
+        })
+    </script>
 </body>
 
 </html>
