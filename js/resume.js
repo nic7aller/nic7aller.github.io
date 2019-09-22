@@ -15,10 +15,6 @@ function getResumeTemplates() {
         var template = Handlebars.compile(data);
         $("#skills").html(template);
     }, 'html');
-    $.get('templates/resume-courses.hbs', function (data) {
-        var template = Handlebars.compile(data);
-        $("#courses").html(template);
-    }, 'html');
     $.get('templates/resume-extra.hbs', function (data) {
         var template = Handlebars.compile(data);
         $("#extra").html(template);

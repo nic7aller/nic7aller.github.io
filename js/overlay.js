@@ -116,9 +116,6 @@ function displayAye() {
         '<img alt="Aye Lobby" src="https://farm6.staticflickr.com/5459/17549293252_f1e14b76a6_o.jpg">' +
         '<p>In a small room just north of the Commons Chamber on the side of the government, once voting start for a bill MPs only have a short time to come to this lobby to vote for a bill. ' +
         'For those voting against a bill, they must go to the No Lobby to the south on the side of the opposition.</p></div>' +
-        '<div class="overlay-pod">' +
-        '<img alt="Mandatory Sketch" src="../pics/aye.jpg">' +
-        '<p>"Aye\'s in Aye" Sketch</p></div>' +
         '<div class="overlay-pod"><p><strong>Sources</strong></p>' +
         '<p><a href="https://www.parliament.uk/site-information/glossary/aye-and-no-lobbies/">Information</a>, ' +
         '<a href="https://www.flickr.com/photos/uk_parliament/17549293252">Picture</a></p></div>' +

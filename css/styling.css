@@ -16,6 +16,11 @@ a[href]:focus {
     border-radius: 20px
 }
 
+hr {
+    margin-bottom: 0% !important;
+    border-top-color: #dedede !important;
+}
+
 .jumbotron {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -266,7 +271,7 @@ div.area-color:hover .popuptext {
 
 #custom-scroll::-webkit-scrollbar-thumb
 {
-	background-color: #5e5e5e;
+	background-color: #7e7e7e;
 }
 
 /* Panel styling */
