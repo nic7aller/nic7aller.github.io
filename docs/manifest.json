@@ -1,0 +1,15 @@
+{
+  "short_name": "Nic 7aller",
+  "name": "Nic 7aller Dev Page",
+  "icons": [
+    {
+      "src": "N7ChipWBackground.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
