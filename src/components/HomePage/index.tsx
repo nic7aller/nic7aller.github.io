@@ -1,12 +1,19 @@
-import { Heading, Main, Paragraph } from "grommet";
 import React from "react";
+import { Box, Heading, Paragraph, Anchor } from "grommet";
+import { Link } from "react-router-dom";
 
 const HomePage: React.FC = () => {
   return (
-    <Main pad="large">
+    <Box fill pad="large">
       <Heading>Welcome!</Heading>
-      <Paragraph>Something about this being placeholder text</Paragraph>
-    </Main>
+      <Paragraph fill>
+        Visit the{" "}
+        <Link to="/resume">
+          <Anchor weight="normal">Resume</Anchor>
+        </Link>{" "}
+        page for more information about me, Nic Siebenaller.
+      </Paragraph>
+    </Box>
   );
 };
 

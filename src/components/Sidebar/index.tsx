@@ -3,6 +3,7 @@ import { Avatar, Nav, Sidebar as GSidebar, ThemeContext } from "grommet";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useHistory } from "react-router-dom";
 import { IconName } from "@fortawesome/fontawesome-svg-core";
+import { ReactComponent as N7Chip } from "./N7ChipWRev.svg";
 import SidebarButton from "./SidebarButton";
 
 type Theme = "light" | "dark";
@@ -39,11 +40,12 @@ const Sidebar: React.FC<SidebarProps> = ({ themeMode, setThemeMode }) => {
         header={
           <Nav gap="small">
             <Avatar
-              border={{ size: "small", color: "brand" }}
-              background="white"
-              flex={false}
+              overflow="visible"
+              round={false}
+              margin={{ vertical: "small" }}
+              flex
             >
-              N.7
+              <N7Chip title="Nic 7aller logo" />
             </Avatar>
             <SidebarButton
               onClick={() => setThemeMode(nextTheme)}

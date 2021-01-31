@@ -2,7 +2,7 @@ const theme = {
   name: "site theme",
   rounding: 4,
   spacing: 24,
-  defaultMode: "light",
+  defaultMode: "dark",
   global: {
     colors: {
       brand: {
@@ -18,8 +18,8 @@ const theme = {
         light: "#EEEEEE",
       },
       "background-front": {
-        dark: "#222222",
-        light: "#FFFFFF",
+        dark: "#333333",
+        light: "#EEEEEE",
       },
       "background-contrast": {
         dark: "#FFFFFF11",
@@ -46,6 +46,10 @@ const theme = {
         light: "#CCCCCC",
       },
       control: "brand",
+      focus: {
+        dark: "white",
+        light: "black",
+      },
       "active-background": "background-contrast",
       "active-text": "text-strong",
       "selected-background": "brand",
@@ -79,6 +83,24 @@ const theme = {
     line: {},
   },
   meter: {},
+  tab: {
+    color: "text-strong",
+    border: {
+      side: "bottom",
+      size: "small",
+      color: {
+        dark: "white",
+        light: "black",
+      },
+      active: {
+        color: "brand",
+      },
+      disabled: {},
+      hover: {
+        color: "accent-1",
+      },
+    },
+  },
 };
 
 export default theme;

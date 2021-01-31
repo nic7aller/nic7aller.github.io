@@ -3,7 +3,7 @@ import { Box, Button, ButtonType, ThemeContext } from "grommet";
 
 type SidebarButtonProps = Omit<
   ButtonType,
-  "icon" | "plain" | "hoverIndicator"
+  "icon" | "plain" | "hoverIndicator" | "focusIndicator"
 > & {
   hoverLabel: string;
   hoverColor: object;
@@ -37,6 +37,7 @@ const SidebarButton: React.FC<SidebarButtonProps> = ({
           }}
           {...props}
           hoverIndicator={hoverColor}
+          focusIndicator={false}
           plain
         >
           <Box pad={{ vertical: "small" }} align="center">

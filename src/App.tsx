@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Box, Grommet } from "grommet";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import HomePage from "./components/HomePage";
-import { HashRouter, Route, Switch } from "react-router-dom";
+import ResumePage from "./components/ResumePage";
 import theme from "./themes";
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
                 <HomePage />
               </Route>
               <Route exact path="/resume">
-                Resume Page
+                <ResumePage />
               </Route>
             </Switch>
           </Box>
