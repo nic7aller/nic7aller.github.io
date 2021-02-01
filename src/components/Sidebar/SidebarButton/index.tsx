@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, ButtonType, ThemeContext } from "grommet";
+import { Box, Button, ButtonType, Text, ThemeContext } from "grommet";
 
 type SidebarButtonProps = Omit<
   ButtonType,
@@ -7,18 +7,25 @@ type SidebarButtonProps = Omit<
 > & {
   hoverLabel: string;
   hoverColor: object;
+  expanded: boolean;
   faIcon: JSX.Element;
 };
 
 const SidebarButton: React.FC<SidebarButtonProps> = ({
   ...props
 }: SidebarButtonProps) => {
-  const { hoverLabel, hoverColor, faIcon } = props;
+  const { hoverLabel, hoverColor, expanded, faIcon } = props;
+  const expandedProps: ButtonType = expanded ? { } : { tip: {
+    content: <Box>{hoverLabel}</Box>,
+    dropProps: { align: { left: "right" } },
+  }};
   return (
     <ThemeContext.Extend
       value={{
+        global: { animation: false},
         tip: {
           content: {
+            animation: "none",
             margin: "small",
             pad: "small",
             background: hoverColor,
@@ -31,17 +38,14 @@ const SidebarButton: React.FC<SidebarButtonProps> = ({
     >
       <Box fill="horizontal">
         <Button
-          tip={{
-            content: <Box>{hoverLabel}</Box>,
-            dropProps: { align: { left: "right" } },
-          }}
           {...props}
+          {...expandedProps}
           hoverIndicator={hoverColor}
           focusIndicator={false}
           plain
         >
-          <Box pad={{ vertical: "small" }} align="center">
-            {faIcon}
+          <Box direction="row" pad="small" gap="small" align="center">
+            {faIcon}{expanded && <Text>{hoverLabel}</Text>}
           </Box>
         </Button>
       </Box>

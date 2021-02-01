@@ -1,5 +1,5 @@
 import React from "react";
-import { Avatar, Nav, Sidebar as GSidebar, ThemeContext } from "grommet";
+import { Avatar, Button, Nav, Sidebar as GSidebar } from "grommet";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useHistory } from "react-router-dom";
 import { IconName } from "@fortawesome/fontawesome-svg-core";
@@ -20,23 +20,22 @@ type SidebarProps = {
 
 const Sidebar: React.FC<SidebarProps> = ({ themeMode, setThemeMode }) => {
   const history = useHistory();
+  const [expand, setExpand] = React.useState<boolean>(false);
   const nextTheme = themeMode !== "light" ? "light" : "dark";
+  const expandIcon = `angle-${expand ? "left" : "right"}` as IconName;
+  const expandAnimation = `slide${expand ? "Right" : "Left"}` as
+    | "slideRight"
+    | "slideLeft";
   return (
-    <ThemeContext.Extend
-      value={{
-        tip: {
-          content: {
-            margin: "small",
-            pad: "small",
-            background: backgroundColor,
-            round: false,
-            flex: false,
-          },
-        },
-      }}
-    >
+    <>
+    <GSidebar background="black" pad="none">
       <GSidebar
         background="black"
+        justify="center"
+        animation={{
+          type: expandAnimation,
+          duration: 500,
+        }}
         header={
           <Nav gap="small">
             <Avatar
@@ -51,9 +50,11 @@ const Sidebar: React.FC<SidebarProps> = ({ themeMode, setThemeMode }) => {
               onClick={() => setThemeMode(nextTheme)}
               hoverLabel="Toggle Theme"
               hoverColor={backgroundColor}
+              expanded={expand}
               faIcon={
                 <FontAwesomeIcon
                   icon={["fas", themeIcons[themeMode]]}
+                  className="fa-fw"
                   size="lg"
                 />
               }
@@ -65,14 +66,28 @@ const Sidebar: React.FC<SidebarProps> = ({ themeMode, setThemeMode }) => {
             <SidebarButton
               href="https://www.github.com/nic7aller/"
               hoverLabel="GitHub"
-              faIcon={<FontAwesomeIcon icon={["fab", "github"]} size="lg" />}
               hoverColor={backgroundColor}
+              expanded={expand}
+              faIcon={
+                <FontAwesomeIcon
+                  icon={["fab", "github"]}
+                  className="fa-fw"
+                  size="lg"
+                />
+              }
             />
             <SidebarButton
               href="https://www.linkedin.com/in/nicholassiebenaller/"
               hoverLabel="LinkedIn"
-              faIcon={<FontAwesomeIcon icon={["fab", "linkedin"]} size="lg" />}
               hoverColor={backgroundColor}
+              expanded={expand}
+              faIcon={
+                <FontAwesomeIcon
+                  icon={["fab", "linkedin"]}
+                  className="fa-fw"
+                  size="lg"
+                />
+              }
             />
           </Nav>
         }
@@ -82,17 +97,45 @@ const Sidebar: React.FC<SidebarProps> = ({ themeMode, setThemeMode }) => {
             onClick={() => history.push("/")}
             hoverLabel="Home"
             hoverColor={backgroundColor}
-            faIcon={<FontAwesomeIcon icon={["fas", "home"]} size="lg" />}
+            expanded={expand}
+            faIcon={
+              <FontAwesomeIcon
+                icon={["fas", "home"]}
+                className="fa-fw"
+                size="lg"
+              />
+            }
           />
           <SidebarButton
             onClick={() => history.push("/resume")}
             hoverLabel="Resume"
             hoverColor={backgroundColor}
-            faIcon={<FontAwesomeIcon icon={["fas", "file-alt"]} size="lg" />}
+            expanded={expand}
+            faIcon={
+              <FontAwesomeIcon
+                icon={["fas", "file-alt"]}
+                className="fa-fw"
+                size="lg"
+              />
+            }
           />
         </Nav>
-      </GSidebar>
-    </ThemeContext.Extend>
+      </GSidebar></GSidebar>
+      <GSidebar background="background-back" pad="none">
+      <GSidebar direction="row" align="center" background="background-back" pad="xsmall" gap="medium" animation={{
+          type: expandAnimation,
+          duration: 500,
+        }}>
+        <Button hoverIndicator={backgroundColor} focusIndicator={false}>
+          <FontAwesomeIcon
+            icon={["fas", expandIcon]}
+            className="fa-fw"
+            size="lg"
+            onClick={() => setExpand(!expand)}
+          />
+        </Button>
+      </GSidebar></GSidebar>
+    </>
   );
 };
 
