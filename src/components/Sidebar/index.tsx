@@ -28,113 +28,121 @@ const Sidebar: React.FC<SidebarProps> = ({ themeMode, setThemeMode }) => {
     | "slideLeft";
   return (
     <>
-    <GSidebar background="black" pad="none">
-      <GSidebar
-        background="black"
-        justify="center"
-        animation={{
-          type: expandAnimation,
-          duration: 500,
-        }}
-        header={
-          <Nav gap="small">
-            <Avatar
-              overflow="visible"
-              round={false}
-              margin={{ vertical: "small" }}
-              flex
-            >
-              <N7Chip title="Nic 7aller logo" />
-            </Avatar>
+      <GSidebar background="black" pad="none">
+        <GSidebar
+          background="black"
+          justify="center"
+          animation={{
+            type: expandAnimation,
+            duration: 500,
+          }}
+          header={
+            <Nav gap="small">
+              <Avatar
+                overflow="visible"
+                round={false}
+                margin={{ vertical: "small" }}
+                flex
+              >
+                <N7Chip title="Nic 7aller logo" />
+              </Avatar>
+              <SidebarButton
+                onClick={() => setThemeMode(nextTheme)}
+                hoverLabel="Toggle Theme"
+                hoverColor={backgroundColor}
+                expanded={expand}
+                faIcon={
+                  <FontAwesomeIcon
+                    icon={["fas", themeIcons[themeMode]]}
+                    className="fa-fw"
+                    size="lg"
+                  />
+                }
+              />
+            </Nav>
+          }
+          footer={
+            <Nav gap="small">
+              <SidebarButton
+                href="https://www.github.com/nic7aller/"
+                hoverLabel="GitHub"
+                hoverColor={backgroundColor}
+                expanded={expand}
+                faIcon={
+                  <FontAwesomeIcon
+                    icon={["fab", "github"]}
+                    className="fa-fw"
+                    size="lg"
+                  />
+                }
+              />
+              <SidebarButton
+                href="https://www.linkedin.com/in/nicholassiebenaller/"
+                hoverLabel="LinkedIn"
+                hoverColor={backgroundColor}
+                expanded={expand}
+                faIcon={
+                  <FontAwesomeIcon
+                    icon={["fab", "linkedin"]}
+                    className="fa-fw"
+                    size="lg"
+                  />
+                }
+              />
+            </Nav>
+          }
+        >
+          <Nav>
             <SidebarButton
-              onClick={() => setThemeMode(nextTheme)}
-              hoverLabel="Toggle Theme"
+              onClick={() => history.push("/")}
+              hoverLabel="Home"
               hoverColor={backgroundColor}
               expanded={expand}
               faIcon={
                 <FontAwesomeIcon
-                  icon={["fas", themeIcons[themeMode]]}
+                  icon={["fas", "home"]}
+                  className="fa-fw"
+                  size="lg"
+                />
+              }
+            />
+            <SidebarButton
+              onClick={() => history.push("/resume")}
+              hoverLabel="Resume"
+              hoverColor={backgroundColor}
+              expanded={expand}
+              faIcon={
+                <FontAwesomeIcon
+                  icon={["fas", "file-alt"]}
                   className="fa-fw"
                   size="lg"
                 />
               }
             />
           </Nav>
-        }
-        footer={
-          <Nav gap="small">
-            <SidebarButton
-              href="https://www.github.com/nic7aller/"
-              hoverLabel="GitHub"
-              hoverColor={backgroundColor}
-              expanded={expand}
-              faIcon={
-                <FontAwesomeIcon
-                  icon={["fab", "github"]}
-                  className="fa-fw"
-                  size="lg"
-                />
-              }
+        </GSidebar>
+      </GSidebar>
+      <GSidebar pad="none">
+        <GSidebar
+          direction="row"
+          align="center"
+          pad="xsmall"
+          gap="medium"
+          animation={{
+            type: expandAnimation,
+            duration: 500,
+          }}
+        >
+          <Button hoverIndicator={backgroundColor} focusIndicator={false}>
+            <FontAwesomeIcon
+              icon={["fas", expandIcon]}
+              className="fa-fw"
+              size="lg"
+              onClick={() => setExpand(!expand)}
             />
-            <SidebarButton
-              href="https://www.linkedin.com/in/nicholassiebenaller/"
-              hoverLabel="LinkedIn"
-              hoverColor={backgroundColor}
-              expanded={expand}
-              faIcon={
-                <FontAwesomeIcon
-                  icon={["fab", "linkedin"]}
-                  className="fa-fw"
-                  size="lg"
-                />
-              }
-            />
-          </Nav>
-        }
-      >
-        <Nav>
-          <SidebarButton
-            onClick={() => history.push("/")}
-            hoverLabel="Home"
-            hoverColor={backgroundColor}
-            expanded={expand}
-            faIcon={
-              <FontAwesomeIcon
-                icon={["fas", "home"]}
-                className="fa-fw"
-                size="lg"
-              />
-            }
-          />
-          <SidebarButton
-            onClick={() => history.push("/resume")}
-            hoverLabel="Resume"
-            hoverColor={backgroundColor}
-            expanded={expand}
-            faIcon={
-              <FontAwesomeIcon
-                icon={["fas", "file-alt"]}
-                className="fa-fw"
-                size="lg"
-              />
-            }
-          />
-        </Nav>
-      </GSidebar></GSidebar>
-      <GSidebar background="background-back" pad="none">
-      <GSidebar direction="row" align="center" background="background-back" pad="xsmall" gap="medium" animation={{
-          type: expandAnimation,
-          duration: 500,
-        }}>
-        <Button hoverIndicator={backgroundColor} focusIndicator={false}>
-          <FontAwesomeIcon
-            icon={["fas", expandIcon]}
-            className="fa-fw"
-            size="lg"
-            onClick={() => setExpand(!expand)}
-          />
-        </Button>
-      </GSidebar></GSidebar>
+          </Button>
+        </GSidebar>
+      </GSidebar>
     </>
   );
 };
