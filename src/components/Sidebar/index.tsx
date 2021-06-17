@@ -42,7 +42,6 @@ const Sidebar: React.FC<SidebarProps> = ({ themeMode, setThemeMode }) => {
                 overflow="visible"
                 round={false}
                 margin={{ vertical: "small" }}
-                flex
               >
                 <N7Chip title="Nic 7aller logo" />
               </Avatar>
